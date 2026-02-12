@@ -1,0 +1,96 @@
+.footer {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.column h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.column p {
+    color: #d1d5db;
+    /* gray-300 */
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.column h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--red-accent);
+}
+
+.links {
+    list-style: none;
+    padding: 0;
+}
+
+.links li {
+    margin-bottom: 0.5rem;
+}
+
+.links a {
+    color: #d1d5db;
+    font-size: 0.875rem;
+    transition: color 0.2s;
+}
+
+.links a:hover {
+    color: var(--white);
+}
+
+.contactList li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    color: #d1d5db;
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+}
+
+.mapPlaceholder {
+    background-color: #1f2937;
+    /* gray-800 */
+    height: 12rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    color: #6b7280;
+    /* gray-500 */
+}
+
+.copyright {
+    border-top: 1px solid #374151;
+    /* gray-700 */
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #9ca3af;
+    /* gray-400 */
+}
