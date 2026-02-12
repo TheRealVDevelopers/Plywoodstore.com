@@ -1,15 +1,15 @@
 import { Phone, MessageCircle } from 'lucide-react';
 
 export default function FloatingWhatsApp() {
-  const whatsappNumber = "919876543210";
+  const whatsappNumber = "919832169125";
   const message = encodeURIComponent("Hello, I am interested in your products.");
-  const callNumber = "+919876543210";
+  const callNumber = "+919832169125";
 
   return (
     <div className="fixed bottom-8 right-8 z-[9999] flex flex-col gap-4 items-end">
       <a
         href={`tel:${callNumber}`}
-        className="w-12 h-12 bg-[#0D0D0D] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
+        className="w-12 h-12 bg-[#0A1628] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
         aria-label="Call Us"
       >
         <Phone size={24} />

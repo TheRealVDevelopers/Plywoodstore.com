@@ -112,7 +112,7 @@ export const siteData: Record<string, Category> = {
         }
     },
     laminates: {
-        title: "Decorative Laminates",
+        title: "Laminates",
         description: "Transform your surfaces with our exquisite collection of laminates.",
         heroImage: "https://images.unsplash.com/photo-1505691938895-1758d7bab58d?auto=format&fit=crop&q=80",
         brands: {
@@ -291,7 +291,7 @@ export const siteData: Record<string, Category> = {
         }
     },
     mdf: {
-        title: "MDF Boards",
+        title: "MDF/HDHMR",
         description: "Consistency and smoothness defined. MDF boards for precise machining and painting.",
         heroImage: "https://images.unsplash.com/photo-1510074377623-8cf13fb86c08?auto=format&fit=crop&q=80",
         brands: {
@@ -434,11 +434,30 @@ export const siteData: Record<string, Category> = {
                     { name: "Melamine Faced", image: "", description: "Decorative boards." }
                 ],
                 videos: ["dQw4w9WgXcQ"]
+            },
+            unbranded: {
+                name: "Unbranded",
+                slug: "unbranded",
+                tagline: "Economical solutions",
+                description: "Quality unbranded particle boards for cost-effective furniture and interior applications.",
+                heroImage: "https://images.unsplash.com/photo-1532324398188-4f80072d62be?auto=format&fit=crop&q=80",
+                title: "Unbranded Particle Board Dealer",
+                logo: "",
+                gallery: [
+                    "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80",
+                    "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80",
+                    "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80",
+                    "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80"
+                ],
+                products: [
+                    { name: "Plain Particle Board", image: "", description: "For lamination and painting." }
+                ],
+                videos: []
             }
         }
     },
     hardware: {
-        title: "Kitchen & Wardrobe Hardware",
+        title: "Hardware",
         description: "Smooth movement and robust mechanisms for your cabinets and drawers.",
         heroImage: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80",
         brands: {
@@ -522,7 +541,7 @@ export const siteData: Record<string, Category> = {
         }
     },
     fevicol: {
-        title: "Adhesives",
+        title: "Fevicol",
         description: "The ultimate bonding solution for woodworking.",
         heroImage: "https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&q=80",
         brands: {

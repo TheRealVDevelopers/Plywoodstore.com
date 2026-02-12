@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, ChevronDown, Phone, MapPin } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { siteData } from '@/data/siteData';
@@ -18,57 +19,28 @@ export default function Header() {
   const isActive = (path: string) => pathname === path;
   const isCategoryActive = (category: string) => pathname.startsWith(`/${category}`);
 
-  return (
-    <header className="fixed w-full top-0 left-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#E8E4DE]/50 font-body">
-      {/* Top bar - compact */}
-      <div className="bg-[#0D0D0D] text-white py-2 text-xs md:text-sm">
-        <div className="container flex justify-between items-center">
-          <div className="flex items-center gap-6">
-            <a href="tel:+919876543210" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-              <Phone size={14} className="text-[#C45C3F]" />
-              +91 98765 43210
-            </a>
-            <span className="hidden sm:flex items-center gap-2 text-gray-400">
-              <MapPin size={14} className="text-[#C45C3F]" />
-              Kirti Nagar, New Delhi
-            </span>
-          </div>
-          <div className="flex items-center gap-4">
-            <Link href="/contact" className="text-gray-400 hover:text-[#C45C3F] transition-colors font-medium">
-              Request Quote
-            </Link>
-            <span className="text-white/20">|</span>
-            <Link href="/about" className="text-gray-400 hover:text-[#C45C3F] transition-colors font-medium">
-              About Us
-            </Link>
-          </div>
-        </div>
-      </div>
+  const navLinkClass = (active: boolean) =>
+    `px-5 py-3 font-semibold text-lg tracking-[0.5px] transition-colors ${
+      active ? 'text-[#A4161A] font-bold underline decoration-2 underline-offset-4' : 'text-[#081F44] hover:text-[#A4161A]'
+    }`;
 
-      {/* Main nav */}
+  return (
+    <header className="fixed w-full top-0 left-0 z-50 bg-[#FFFFFF] border-b border-[#E5E7EB] h-[100px] min-h-[90px] flex flex-col justify-center">
       <div className="container py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 bg-[#C45C3F] rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:bg-[#A84D32] transition-colors font-heading">
-            P
-          </div>
-          <div className="flex flex-col">
-            <span className="text-xl font-bold leading-none text-[#0D0D0D] tracking-tight font-heading">
-              PLYWOOD<span className="text-[#C45C3F]">STORES</span>
-            </span>
-            <span className="text-[10px] tracking-widest text-[#6B6B6B] font-semibold uppercase">
-              Authorized Dealer
-            </span>
-          </div>
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/logo.png"
+            alt="Plywood Stores"
+            width={180}
+            height={56}
+            className="h-12 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-1">
-          <Link
-            href="/"
-            className={`px-4 py-2 font-semibold text-sm tracking-wide rounded-lg transition-colors ${
-              isActive('/') ? 'text-[#C45C3F] bg-[#C45C3F]/5' : 'text-[#0D0D0D] hover:text-[#C45C3F] hover:bg-[#F7F4EF]'
-            }`}
-          >
+          <Link href="/" className={navLinkClass(isActive('/'))}>
             Home
           </Link>
 
@@ -81,23 +53,22 @@ export default function Header() {
             >
               <Link
                 href={`/${key}`}
-                className={`flex items-center gap-1 px-4 py-2 font-semibold text-sm tracking-wide rounded-lg transition-colors ${
-                  isCategoryActive(key) ? 'text-[#C45C3F] bg-[#C45C3F]/5' : 'text-[#0D0D0D] hover:text-[#C45C3F] hover:bg-[#F7F4EF]'
+                className={`flex items-center gap-1 px-5 py-3 font-semibold text-lg tracking-[0.5px] transition-colors ${
+                  isCategoryActive(key) ? 'text-[#A4161A] font-bold underline decoration-2 underline-offset-4' : 'text-[#081F44] hover:text-[#A4161A]'
                 }`}
               >
                 {category.title}
-                <ChevronDown size={14} className={`transition-transform duration-200 ${activeDropdown === key ? 'rotate-180' : ''}`} />
+                <ChevronDown size={18} className={`transition-transform duration-200 ${activeDropdown === key ? 'rotate-180' : ''}`} />
               </Link>
 
-              {/* Mega dropdown */}
               <div
-                className={`absolute top-full left-0 mt-1 w-72 bg-white rounded-xl shadow-elevated border border-[#E8E4DE] overflow-hidden transition-all duration-200 origin-top ${
+                className={`absolute top-full left-0 mt-0 w-80 bg-white rounded-b-xl shadow-xl border border-t-0 border-[#E5E7EB] overflow-hidden transition-all duration-200 origin-top ${
                   activeDropdown === key ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-95 pointer-events-none'
                 }`}
               >
-                <div className="p-2">
-                  <div className="px-3 py-2 border-b border-[#E8E4DE] mb-2">
-                    <span className="text-xs font-semibold text-[#6B6B6B] uppercase tracking-wider">
+                <div className="p-4">
+                  <div className="px-4 py-3 border-b border-[#E5E7EB] mb-2">
+                    <span className="text-sm font-semibold text-[#64748B] uppercase tracking-wider">
                       Brands under {category.title}
                     </span>
                   </div>
@@ -105,14 +76,16 @@ export default function Header() {
                     <Link
                       key={brandKey}
                       href={`/${key}/${brand.slug}`}
-                      className="block px-4 py-3 rounded-lg text-[#0D0D0D] hover:bg-[#F7F4EF] hover:text-[#C45C3F] font-medium transition-colors"
+                      className="block px-4 py-3 rounded-lg text-[#081F44] hover:bg-[#F8FAFC] hover:text-[#A4161A] font-medium text-base transition-colors"
+                      onClick={() => setActiveDropdown(null)}
                     >
                       {brand.name}
                     </Link>
                   ))}
                   <Link
                     href={`/${key}`}
-                    className="block px-4 py-3 mt-2 rounded-lg text-[#C45C3F] font-semibold hover:bg-[#C45C3F]/10 transition-colors text-sm"
+                    className="block px-4 py-3 mt-2 rounded-lg text-[#A4161A] font-bold hover:bg-[#A4161A]/5 transition-colors text-base"
+                    onClick={() => setActiveDropdown(null)}
                   >
                     View all {category.title} →
                   </Link>
@@ -121,19 +94,29 @@ export default function Header() {
             </div>
           ))}
 
-          <Link
-            href="/contact"
-            className={`px-4 py-2 font-semibold text-sm tracking-wide rounded-lg transition-colors ${
-              isActive('/contact') ? 'text-[#C45C3F] bg-[#C45C3F]/5' : 'text-[#0D0D0D] hover:text-[#C45C3F] hover:bg-[#F7F4EF]'
-            }`}
-          >
+          <Link href="/about" className={navLinkClass(isActive('/about'))}>
+            ABOUT US
+          </Link>
+          <Link href="/contact" className={navLinkClass(isActive('/contact'))}>
             Contact
           </Link>
         </nav>
 
+        {/* Top bar - Phone & Location - visible on desktop */}
+        <div className="hidden lg:flex items-center gap-6">
+          <a href="tel:+919876543210" className="flex items-center gap-2 text-[#081F44] hover:text-[#A4161A] transition-colors font-semibold text-base">
+            <Phone size={18} className="text-[#A4161A]" />
+            +91 98765 43210
+          </a>
+          <span className="flex items-center gap-2 text-[#64748B] text-base">
+            <MapPin size={18} className="text-[#A4161A]" />
+            Kirti Nagar, New Delhi
+          </span>
+        </div>
+
         {/* Mobile menu trigger */}
         <button
-          className="lg:hidden p-2 text-[#0D0D0D] hover:text-[#C45C3F] hover:bg-[#F7F4EF] rounded-lg transition-colors"
+          className="lg:hidden p-2 text-[#081F44] hover:text-[#A4161A] rounded-lg transition-colors"
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
         >
@@ -156,33 +139,37 @@ export default function Header() {
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="p-6 border-b border-[#E8E4DE] flex justify-between items-center bg-[#0D0D0D] text-white">
-          <span className="font-bold text-lg tracking-wide font-heading">Menu</span>
-          <button onClick={toggleMobileMenu} className="p-2 hover:bg-white/10 rounded-lg transition-colors">
+        <div className="p-6 border-b border-[#E5E7EB] flex justify-between items-center">
+          <Image src="/logo.png" alt="Plywood Stores" width={140} height={44} className="h-10 w-auto" />
+          <button onClick={toggleMobileMenu} className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
             <X size={24} />
           </button>
         </div>
         <div className="p-6 overflow-y-auto h-full pb-24">
-          <div className="flex flex-col gap-6">
-            <Link href="/" className="text-lg font-bold text-[#0D0D0D] hover:text-[#C45C3F] transition-colors" onClick={toggleMobileMenu}>
+          <a href="tel:+919876543210" className="flex items-center gap-2 text-[#081F44] font-semibold text-lg mb-6">
+            <Phone size={20} className="text-[#A4161A]" />
+            +91 98765 43210
+          </a>
+          <div className="flex flex-col gap-2">
+            <Link href="/" className="text-lg font-bold text-[#081F44] hover:text-[#A4161A] transition-colors py-3 border-b border-[#E5E7EB]" onClick={toggleMobileMenu}>
               Home
             </Link>
-
             {Object.entries(siteData).map(([key, category]) => (
-              <div key={key} className="flex flex-col gap-3">
+              <div key={key} className="border-b border-[#E5E7EB]">
                 <Link
                   href={`/${key}`}
-                  className="text-lg font-bold text-[#0D0D0D] flex justify-between items-center border-b border-[#E8E4DE] pb-2 hover:text-[#C45C3F] transition-colors"
+                  className="text-lg font-bold text-[#081F44] flex justify-between items-center py-3 hover:text-[#A4161A] transition-colors"
                   onClick={toggleMobileMenu}
                 >
                   {category.title}
+                  <ChevronDown size={20} />
                 </Link>
-                <div className="pl-4 flex flex-col gap-2 border-l-2 border-[#E8E4DE] ml-1">
+                <div className="pl-4 pb-3 flex flex-col gap-2">
                   {Object.entries(category.brands).map(([brandKey, brand]) => (
                     <Link
                       key={brandKey}
                       href={`/${key}/${brand.slug}`}
-                      className="text-[#6B6B6B] font-medium hover:text-[#C45C3F] transition-colors py-1"
+                      className="text-base text-[#64748B] hover:text-[#A4161A] transition-colors py-1"
                       onClick={toggleMobileMenu}
                     >
                       {brand.name}
@@ -191,11 +178,10 @@ export default function Header() {
                 </div>
               </div>
             ))}
-
-            <Link href="/about" className="text-lg font-bold text-[#0D0D0D] border-t border-[#E8E4DE] pt-4 hover:text-[#C45C3F] transition-colors" onClick={toggleMobileMenu}>
+            <Link href="/about" className="text-lg font-bold text-[#081F44] py-3 border-b border-[#E5E7EB] hover:text-[#A4161A] transition-colors" onClick={toggleMobileMenu}>
               About Us
             </Link>
-            <Link href="/contact" className="text-lg font-bold text-[#0D0D0D] hover:text-[#C45C3F] transition-colors" onClick={toggleMobileMenu}>
+            <Link href="/contact" className="text-lg font-bold text-[#081F44] py-3 hover:text-[#A4161A] transition-colors" onClick={toggleMobileMenu}>
               Contact
             </Link>
           </div>

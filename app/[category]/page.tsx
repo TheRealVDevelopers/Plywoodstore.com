@@ -34,7 +34,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative min-h-[50vh] flex items-center justify-center text-white bg-[#0D0D0D] overflow-hidden">
+      <section className="relative min-h-[50vh] flex items-center justify-center text-white bg-[#081F44] overflow-hidden">
         <Image
           src={data.heroImage}
           alt={data.title}
@@ -52,16 +52,16 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           </nav>
           <h1 className="text-5xl md:text-6xl font-bold mb-4 font-heading">{data.title}</h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">{data.description}</p>
-          <div className="w-20 h-1 bg-[#C45C3F] mx-auto mt-6 rounded-full" />
+          <div className="w-20 h-1 bg-[#A4161A] mx-auto mt-6 rounded-full" />
         </div>
       </section>
 
       {/* Breadcrumb */}
       <div className="bg-[#F7F4EF] py-3 border-b border-[#E8E4DE]">
         <div className="container text-sm text-[#6B6B6B] flex items-center gap-2">
-          <Link href="/" className="hover:text-[#C45C3F] transition-colors">Home</Link>
+          <Link href="/" className="hover:text-[#A4161A] transition-colors">Home</Link>
           <span>/</span>
-          <span className="text-[#0D0D0D] font-semibold capitalize">{data.title}</span>
+          <span className="text-[#081F44] font-semibold capitalize">{data.title}</span>
         </div>
       </div>
 
@@ -69,8 +69,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       <section className="section-padding bg-white">
         <div className="container">
           <div className="mb-12">
-            <span className="text-[#C45C3F] font-semibold text-sm uppercase tracking-widest">Our Brands</span>
-            <h2 className="text-4xl font-bold text-[#0D0D0D] mt-2 font-heading">
+            <span className="text-[#A4161A] font-semibold text-sm uppercase tracking-widest">Our Brands</span>
+            <h2 className="text-4xl font-bold text-[#081F44] mt-2 font-heading">
               Premium Brands Under {data.title}
             </h2>
             <p className="text-[#6B6B6B] mt-2 max-w-2xl">
@@ -82,7 +82,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             {Object.entries(data.brands).map(([key, brand]) => (
               <div
                 key={key}
-                className="group bg-white rounded-2xl overflow-hidden shadow-card border border-[#E8E4DE] hover:border-[#C45C3F]/30 hover:shadow-elevated transition-all duration-300 -translate-y-0 hover:-translate-y-1"
+                className="group bg-white rounded-2xl overflow-hidden shadow-card border border-[#E8E4DE] hover:border-[#A4161A]/30 hover:shadow-elevated transition-all duration-300 -translate-y-0 hover:-translate-y-1"
               >
                 <Link href={`/${categoryKey}/${brand.slug}`} className="block">
                   <div className="relative h-[260px] overflow-hidden">
@@ -107,7 +107,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                   </div>
                   <div className="p-6">
                     <p className="text-[#6B6B6B] mb-6 line-clamp-2 min-h-[48px]">{brand.description}</p>
-                    <span className="inline-flex items-center gap-2 text-[#C45C3F] font-semibold group-hover:gap-3 transition-all">
+                    <span className="inline-flex items-center gap-2 text-[#A4161A] font-semibold group-hover:gap-3 transition-all">
                       View Brand Page
                       <ChevronRight className="w-5 h-5" />
                     </span>
@@ -120,15 +120,15 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-[#0D0D0D] text-white text-center">
+      <section className="section-padding bg-[#081F44] text-white text-center">
         <div className="container">
-          <h2 className="text-3xl font-bold mb-6 font-heading">Need Expert Advice?</h2>
+          <h2 className="text-4xl font-bold mb-6">Need Expert Advice?</h2>
           <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
             Our consultants can help you choose the right material for your specific project needs.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-10 py-4 bg-[#C45C3F] text-white font-semibold rounded-lg hover:bg-[#A84D32] transition-all"
+            className="inline-flex items-center gap-2 px-10 py-4 bg-[#A4161A] text-white font-semibold rounded-lg hover:bg-[#C41E3A] transition-all"
           >
             Get a Free Consultation
           </Link>

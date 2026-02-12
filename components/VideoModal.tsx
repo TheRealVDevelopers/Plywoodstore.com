@@ -40,7 +40,7 @@ export default function VideoModal({ videos }: VideoModalProps) {
                             className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                         />
                         <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-16 h-16 bg-[#C45C3F] rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
+                            <div className="w-16 h-16 bg-[#A4161A] rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
                                 <Play className="text-white fill-current ml-1" size={32} />
                             </div>
                         </div>
@@ -53,7 +53,7 @@ export default function VideoModal({ videos }: VideoModalProps) {
                 <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/95 backdrop-blur-sm p-4">
                     <button
                         onClick={closeModal}
-                        className="absolute top-6 right-6 text-white hover:text-[#C45C3F] transition-colors z-10"
+                        className="absolute top-6 right-6 text-white hover:text-[#A4161A] transition-colors z-10"
                         aria-label="Close video"
                     >
                         <X size={48} />

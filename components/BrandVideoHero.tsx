@@ -42,7 +42,7 @@ export default function BrandVideoHero({ brandName, tagline, heroImage, videos }
 
       <div className="container relative z-10 grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <span className="inline-block px-4 py-2 bg-[#C45C3F] text-white text-sm font-semibold tracking-wider mb-4 rounded-lg uppercase">
+          <span className="inline-block px-4 py-2 bg-[#E31837] text-white text-sm font-semibold tracking-wider mb-4 rounded-lg uppercase">
             Authorized Dealer
           </span>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight font-heading">
@@ -54,7 +54,7 @@ export default function BrandVideoHero({ brandName, tagline, heroImage, videos }
           {videos.length > 0 && (
             <button
               onClick={openVideo}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-[#C45C3F] text-white font-semibold rounded-lg hover:bg-[#A84D32] transition-all hover:shadow-xl hover:shadow-[#C45C3F]/30 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-[#E31837] text-white font-semibold rounded-lg hover:bg-[#C41E3A] transition-all hover:shadow-xl hover:shadow-[#E31837]/30 hover:-translate-y-0.5"
             >
               <span className="flex items-center justify-center w-12 h-12 rounded-full bg-white/20">
                 <Play className="w-6 h-6 ml-0.5" fill="currentColor" />
@@ -65,7 +65,7 @@ export default function BrandVideoHero({ brandName, tagline, heroImage, videos }
           {videos.length === 0 && (
             <a
               href="#products"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C45C3F] text-white font-semibold rounded-lg hover:bg-[#A84D32] transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#E31837] text-white font-semibold rounded-lg hover:bg-[#C41E3A] transition-all"
             >
               Explore Products
             </a>
@@ -77,7 +77,7 @@ export default function BrandVideoHero({ brandName, tagline, heroImage, videos }
           <div className="hidden md:flex justify-end">
             <button
               onClick={openVideo}
-              className="group relative w-full max-w-md aspect-video rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl hover:border-[#C45C3F] transition-all"
+              className="group relative w-full max-w-md aspect-video rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl hover:border-[#E31837] transition-all"
             >
               <Image
                 src={`https://img.youtube.com/vi/${videos[0]}/maxresdefault.jpg`}
@@ -86,7 +86,7 @@ export default function BrandVideoHero({ brandName, tagline, heroImage, videos }
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 flex items-center justify-center transition-colors">
-                <div className="w-20 h-20 rounded-full bg-[#C45C3F] flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl">
+                <div className="w-20 h-20 rounded-full bg-[#E31837] flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl">
                   <Play className="w-10 h-10 ml-1 text-white" fill="currentColor" />
                 </div>
               </div>
@@ -106,7 +106,7 @@ export default function BrandVideoHero({ brandName, tagline, heroImage, videos }
         >
           <button
             onClick={closeVideo}
-            className="absolute top-6 right-6 text-white hover:text-[#C45C3F] transition-colors z-10"
+            className="absolute top-6 right-6 text-white hover:text-[#E31837] transition-colors z-10"
             aria-label="Close video"
           >
             <X size={40} />

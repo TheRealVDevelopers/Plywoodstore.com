@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import CategoryPage from './pages/CategoryPage';
 import BrandPage from './pages/BrandPage';
@@ -12,8 +13,9 @@ import NotFound from './pages/NotFound';
 export default function App() {
   return (
     <>
+      <ScrollToTop />
       <Header />
-      <main className="pt-[120px]">
+      <main className="pt-[100px]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

@@ -1,56 +1,71 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { siteData } from '@/data/siteData';
 
 export default function Footer() {
-  const categories = Object.entries(siteData).slice(0, 6);
+  const categories = Object.entries(siteData);
 
   return (
-    <footer className="bg-[#0D0D0D] text-white">
-      <div className="container py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <footer className="bg-[#081F44] text-white">
+      {/* Brand logo row above footer */}
+      <div className="border-b border-white/10">
+        <div className="container py-8">
+          <Link href="/" className="inline-block">
+            <Image
+              src="/logo.png"
+              alt="Plywood Stores"
+              width={220}
+              height={66}
+              className="h-12 w-auto object-contain brightness-0 invert"
+            />
+          </Link>
+        </div>
+      </div>
+
+      <div className="container py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
           {/* Brand */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-[#C45C3F] rounded-lg flex items-center justify-center font-bold text-xl font-heading">
-                P
-              </div>
-              <span className="text-xl font-bold font-heading">
-                PLYWOOD<span className="text-[#C45C3F]">STORES</span>
-              </span>
-            </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
+          <div>
+            <p className="text-base leading-relaxed text-white/90">
               Your trusted supplier for premium plywood and interior materials. Authorized dealers for Century, Greenply, Merino, and more.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-[#C45C3F] font-semibold text-sm uppercase tracking-wider mb-4">Quick Links</h4>
-            <ul className="space-y-3">
-              <li><Link href="/" className="text-gray-400 hover:text-white transition-colors text-sm">Home</Link></li>
-              <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors text-sm">About Us</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">Contact</Link></li>
+            <h4 className="text-xl font-bold mb-6 pb-2 border-b-2 border-[#A4161A] w-fit">Quick Links</h4>
+            <ul className="space-y-4">
+              <li><Link href="/" className="text-base text-white/90 hover:text-white transition-colors">Home</Link></li>
+              <li><Link href="/about" className="text-base text-white/90 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/contact" className="text-base text-white/90 hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
 
-          {/* Categories */}
-          <div>
-            <h4 className="text-[#C45C3F] font-semibold text-sm uppercase tracking-wider mb-4">Categories</h4>
-            <ul className="space-y-3">
+          {/* Our Brands */}
+          <div className="lg:col-span-2">
+            <h4 className="text-xl font-bold mb-6 pb-2 border-b-2 border-[#A4161A] w-fit">Our Brands</h4>
+            <div className="grid grid-cols-2 gap-x-12 gap-y-4">
               {categories.map(([key, cat]) => (
-                <li key={key}>
-                  <Link href={`/${key}`} className="text-gray-400 hover:text-white transition-colors text-sm">
-                    {cat.title}
-                  </Link>
-                </li>
+                <div key={key}>
+                  <p className="text-white font-bold text-base mb-2">{cat.title}</p>
+                  <ul className="space-y-1">
+                    {Object.entries(cat.brands).map(([brandKey, brand]) => (
+                      <li key={brandKey}>
+                        <Link href={`/${key}/${brand.slug}`} className="text-base text-white/90 hover:text-white transition-colors">
+                          {brand.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-[#C45C3F] font-semibold text-sm uppercase tracking-wider mb-4">Contact Us</h4>
-            <ul className="space-y-4 text-sm text-gray-400">
+            <h4 className="text-xl font-bold mb-6 pb-2 border-b-2 border-[#A4161A] w-fit">Contact Us</h4>
+            <ul className="space-y-4 text-base text-white/90">
               <li>
                 <a href="tel:+919876543210" className="hover:text-white transition-colors">+91 98765 43210</a>
               </li>
@@ -64,8 +79,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/10 text-center">
-          <p className="text-gray-500 text-sm">© {new Date().getFullYear()} Plywood Stores. All rights reserved.</p>
+        <div className="mt-16 pt-10 border-t border-white/10 text-center">
+          <p className="text-base text-white/70">© {new Date().getFullYear()} Plywood Stores. All rights reserved.</p>
         </div>
       </div>
     </footer>
