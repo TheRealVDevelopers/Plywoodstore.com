@@ -1,12 +1,8 @@
-'use client';
-
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Play, ChevronRight, Shield, Truck, Award, Sparkles } from 'lucide-react';
 import { siteData } from '@/data/siteData';
+import Image from '@/components/Image';
 
-// Collect all brand names for marquee
 const allBrandNames = Object.values(siteData).flatMap((cat) =>
   Object.values(cat.brands).map((b) => b.name)
 );
@@ -14,7 +10,6 @@ const allBrandNames = Object.values(siteData).flatMap((cat) =>
 export default function Home() {
   return (
     <div className="overflow-x-hidden -mt-[120px]">
-      {/* Hero - Full viewport cinematic */}
       <section className="relative min-h-screen flex items-center justify-center bg-[#0D0D0D] text-white overflow-hidden pt-[120px]">
         <div className="absolute inset-0 z-0">
           <Image
@@ -23,7 +18,6 @@ export default function Home() {
             fill
             className="object-cover opacity-35"
             priority
-            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
         </div>
@@ -47,14 +41,14 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/plywood"
+                to="/plywood"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-[#C45C3F] text-white font-semibold rounded-lg hover:bg-[#A84D32] transition-all duration-300 hover:shadow-xl hover:shadow-[#C45C3F]/25 hover:-translate-y-0.5"
               >
                 Explore Products
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
-                href="/contact"
+                to="/contact"
                 className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/50 text-white font-semibold rounded-lg hover:bg-white hover:text-[#0D0D0D] transition-all duration-300"
               >
                 Get a Quote
@@ -79,14 +73,12 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400">
           <span className="text-xs uppercase tracking-widest">Scroll</span>
           <div className="w-px h-12 bg-gradient-to-b from-white/50 to-transparent rounded-full" />
         </div>
       </section>
 
-      {/* Brand Marquee */}
       <section className="py-12 bg-[#0D0D0D] border-y border-white/10 overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap gap-16">
           {[...allBrandNames, ...allBrandNames].map((name, i) => (
@@ -100,7 +92,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Bento Grid - Product Categories */}
       <section className="section-padding bg-[#FAF8F5]">
         <div className="container">
           <div className="text-center mb-16">
@@ -115,7 +106,7 @@ export default function Home() {
             {Object.entries(siteData).map(([key, category], index) => (
               <Link
                 key={key}
-                href={`/${key}`}
+                to={`/${key}`}
                 className={`group relative overflow-hidden rounded-2xl border border-[#E8E4DE] bg-white hover:shadow-elevated transition-all duration-500 hover:-translate-y-1 ${
                   index === 0 ? 'md:col-span-2 md:row-span-2' : ''
                 }`}
@@ -126,7 +117,6 @@ export default function Home() {
                     alt={category.title}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 66vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   <div className="absolute bottom-0 left-0 p-8">
@@ -144,7 +134,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Brands with Video Teaser */}
       <section className="section-padding bg-[#0D0D0D] text-white">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -157,7 +146,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                 <Link
-                  href="/plywood/century"
+                  to="/plywood/century"
                   className="flex items-center justify-center w-20 h-20 rounded-full bg-[#C45C3F] text-white hover:bg-[#A84D32] hover:scale-110 transition-all duration-300 shadow-xl"
                 >
                   <Play className="w-10 h-10 ml-1" fill="currentColor" />
@@ -198,7 +187,7 @@ export default function Home() {
               </div>
 
               <Link
-                href="/contact"
+                to="/contact"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-[#C45C3F] text-white font-semibold rounded-lg hover:bg-[#A84D32] transition-all"
               >
                 Partner With Us
@@ -209,13 +198,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quick CTA */}
       <section className="py-24 bg-gradient-to-r from-[#C45C3F] to-[#A84D32] text-white text-center">
         <div className="container">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Building a Project?</h2>
           <p className="text-xl opacity-90 max-w-2xl mx-auto mb-10">Get expert advice and best market rates for your bulk requirements.</p>
           <Link
-            href="/contact"
+            to="/contact"
             className="inline-flex items-center gap-2 px-12 py-4 bg-white text-[#C45C3F] font-bold text-lg rounded-lg hover:bg-gray-100 transition-all hover:-translate-y-0.5 shadow-xl"
           >
             Request a Quote

@@ -1,39 +1,19 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import { siteData } from '@/data/siteData';
-import { Metadata } from 'next';
+import { Link, useParams, Navigate } from 'react-router-dom';
 import { ChevronRight, Play } from 'lucide-react';
+import { siteData } from '@/data/siteData';
+import Image from '@/components/Image';
 
-interface CategoryPageProps {
-  params: Promise<{ category: string }>;
-}
+export default function CategoryPage() {
+  const { category: categoryKey } = useParams<{ category: string }>();
 
-export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
-  const resolvedParams = await params;
-  const categoryData = siteData[resolvedParams.category];
-  if (!categoryData) return { title: 'Page Not Found' };
-  return {
-    title: `${categoryData.title} | Premium Plywood Stores`,
-    description: categoryData.description,
-  };
-}
+  if (!categoryKey || !siteData[categoryKey]) {
+    return <Navigate to="/" replace />;
+  }
 
-export async function generateStaticParams() {
-  return Object.keys(siteData).map((category) => ({ category }));
-}
-
-export default async function CategoryPage({ params }: CategoryPageProps) {
-  const resolvedParams = await params;
-  const categoryKey = resolvedParams.category;
   const data = siteData[categoryKey];
-
-  if (!data) notFound();
 
   return (
     <div className="min-h-screen">
-      {/* Hero */}
       <section className="relative min-h-[50vh] flex items-center justify-center text-white bg-[#0D0D0D] overflow-hidden">
         <Image
           src={data.heroImage}
@@ -41,12 +21,11 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           fill
           className="object-cover opacity-40"
           priority
-          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
         <div className="container relative z-10 text-center">
           <nav className="flex justify-center items-center text-sm text-gray-400 mb-4 gap-2">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight size={14} />
             <span className="text-white font-semibold">{data.title}</span>
           </nav>
@@ -56,16 +35,14 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         </div>
       </section>
 
-      {/* Breadcrumb */}
       <div className="bg-[#F7F4EF] py-3 border-b border-[#E8E4DE]">
         <div className="container text-sm text-[#6B6B6B] flex items-center gap-2">
-          <Link href="/" className="hover:text-[#C45C3F] transition-colors">Home</Link>
+          <Link to="/" className="hover:text-[#C45C3F] transition-colors">Home</Link>
           <span>/</span>
           <span className="text-[#0D0D0D] font-semibold capitalize">{data.title}</span>
         </div>
       </div>
 
-      {/* Brands Grid */}
       <section className="section-padding bg-white">
         <div className="container">
           <div className="mb-12">
@@ -84,14 +61,13 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 key={key}
                 className="group bg-white rounded-2xl overflow-hidden shadow-card border border-[#E8E4DE] hover:border-[#C45C3F]/30 hover:shadow-elevated transition-all duration-300 -translate-y-0 hover:-translate-y-1"
               >
-                <Link href={`/${categoryKey}/${brand.slug}`} className="block">
+                <Link to={`/${categoryKey}/${brand.slug}`} className="block">
                   <div className="relative h-[260px] overflow-hidden">
                     <Image
                       src={brand.heroImage || brand.gallery?.[0] || 'https://via.placeholder.com/400'}
                       alt={brand.name}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                     {brand.videos && brand.videos.length > 0 && (
@@ -119,7 +95,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="section-padding bg-[#0D0D0D] text-white text-center">
         <div className="container">
           <h2 className="text-3xl font-bold mb-6 font-heading">Need Expert Advice?</h2>
@@ -127,7 +102,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             Our consultants can help you choose the right material for your specific project needs.
           </p>
           <Link
-            href="/contact"
+            to="/contact"
             className="inline-flex items-center gap-2 px-10 py-4 bg-[#C45C3F] text-white font-semibold rounded-lg hover:bg-[#A84D32] transition-all"
           >
             Get a Free Consultation

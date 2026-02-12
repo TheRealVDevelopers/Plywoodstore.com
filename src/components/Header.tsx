@@ -1,15 +1,12 @@
-'use client';
-
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Phone, MapPin } from 'lucide-react';
-import { usePathname } from 'next/navigation';
 import { siteData } from '@/data/siteData';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const pathname = usePathname();
+  const pathname = useLocation().pathname;
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const handleMouseEnter = (category: string) => setActiveDropdown(category);
@@ -20,7 +17,6 @@ export default function Header() {
 
   return (
     <header className="fixed w-full top-0 left-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#E8E4DE]/50 font-body">
-      {/* Top bar - compact */}
       <div className="bg-[#0D0D0D] text-white py-2 text-xs md:text-sm">
         <div className="container flex justify-between items-center">
           <div className="flex items-center gap-6">
@@ -34,20 +30,19 @@ export default function Header() {
             </span>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="/contact" className="text-gray-400 hover:text-[#C45C3F] transition-colors font-medium">
+            <Link to="/contact" className="text-gray-400 hover:text-[#C45C3F] transition-colors font-medium">
               Request Quote
             </Link>
             <span className="text-white/20">|</span>
-            <Link href="/about" className="text-gray-400 hover:text-[#C45C3F] transition-colors font-medium">
+            <Link to="/about" className="text-gray-400 hover:text-[#C45C3F] transition-colors font-medium">
               About Us
             </Link>
           </div>
         </div>
       </div>
 
-      {/* Main nav */}
       <div className="container py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 group">
+        <Link to="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 bg-[#C45C3F] rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:bg-[#A84D32] transition-colors font-heading">
             P
           </div>
@@ -61,10 +56,9 @@ export default function Header() {
           </div>
         </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-1">
           <Link
-            href="/"
+            to="/"
             className={`px-4 py-2 font-semibold text-sm tracking-wide rounded-lg transition-colors ${
               isActive('/') ? 'text-[#C45C3F] bg-[#C45C3F]/5' : 'text-[#0D0D0D] hover:text-[#C45C3F] hover:bg-[#F7F4EF]'
             }`}
@@ -80,7 +74,7 @@ export default function Header() {
               onMouseLeave={handleMouseLeave}
             >
               <Link
-                href={`/${key}`}
+                to={`/${key}`}
                 className={`flex items-center gap-1 px-4 py-2 font-semibold text-sm tracking-wide rounded-lg transition-colors ${
                   isCategoryActive(key) ? 'text-[#C45C3F] bg-[#C45C3F]/5' : 'text-[#0D0D0D] hover:text-[#C45C3F] hover:bg-[#F7F4EF]'
                 }`}
@@ -89,7 +83,6 @@ export default function Header() {
                 <ChevronDown size={14} className={`transition-transform duration-200 ${activeDropdown === key ? 'rotate-180' : ''}`} />
               </Link>
 
-              {/* Mega dropdown */}
               <div
                 className={`absolute top-full left-0 mt-1 w-72 bg-white rounded-xl shadow-elevated border border-[#E8E4DE] overflow-hidden transition-all duration-200 origin-top ${
                   activeDropdown === key ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-95 pointer-events-none'
@@ -104,14 +97,14 @@ export default function Header() {
                   {Object.entries(category.brands).map(([brandKey, brand]) => (
                     <Link
                       key={brandKey}
-                      href={`/${key}/${brand.slug}`}
+                      to={`/${key}/${brand.slug}`}
                       className="block px-4 py-3 rounded-lg text-[#0D0D0D] hover:bg-[#F7F4EF] hover:text-[#C45C3F] font-medium transition-colors"
                     >
                       {brand.name}
                     </Link>
                   ))}
                   <Link
-                    href={`/${key}`}
+                    to={`/${key}`}
                     className="block px-4 py-3 mt-2 rounded-lg text-[#C45C3F] font-semibold hover:bg-[#C45C3F]/10 transition-colors text-sm"
                   >
                     View all {category.title} →
@@ -122,7 +115,7 @@ export default function Header() {
           ))}
 
           <Link
-            href="/contact"
+            to="/contact"
             className={`px-4 py-2 font-semibold text-sm tracking-wide rounded-lg transition-colors ${
               isActive('/contact') ? 'text-[#C45C3F] bg-[#C45C3F]/5' : 'text-[#0D0D0D] hover:text-[#C45C3F] hover:bg-[#F7F4EF]'
             }`}
@@ -131,7 +124,6 @@ export default function Header() {
           </Link>
         </nav>
 
-        {/* Mobile menu trigger */}
         <button
           className="lg:hidden p-2 text-[#0D0D0D] hover:text-[#C45C3F] hover:bg-[#F7F4EF] rounded-lg transition-colors"
           onClick={toggleMobileMenu}
@@ -141,7 +133,6 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile overlay */}
       <div
         className={`lg:hidden fixed inset-0 bg-black/50 z-40 transition-opacity duration-300 ${
           isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
@@ -150,7 +141,6 @@ export default function Header() {
         aria-hidden="true"
       />
 
-      {/* Mobile menu */}
       <div
         className={`lg:hidden fixed top-0 right-0 h-full w-[85%] max-w-sm bg-white z-50 shadow-2xl transform transition-transform duration-300 ease-out ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
@@ -164,14 +154,14 @@ export default function Header() {
         </div>
         <div className="p-6 overflow-y-auto h-full pb-24">
           <div className="flex flex-col gap-6">
-            <Link href="/" className="text-lg font-bold text-[#0D0D0D] hover:text-[#C45C3F] transition-colors" onClick={toggleMobileMenu}>
+            <Link to="/" className="text-lg font-bold text-[#0D0D0D] hover:text-[#C45C3F] transition-colors" onClick={toggleMobileMenu}>
               Home
             </Link>
 
             {Object.entries(siteData).map(([key, category]) => (
               <div key={key} className="flex flex-col gap-3">
                 <Link
-                  href={`/${key}`}
+                  to={`/${key}`}
                   className="text-lg font-bold text-[#0D0D0D] flex justify-between items-center border-b border-[#E8E4DE] pb-2 hover:text-[#C45C3F] transition-colors"
                   onClick={toggleMobileMenu}
                 >
@@ -181,7 +171,7 @@ export default function Header() {
                   {Object.entries(category.brands).map(([brandKey, brand]) => (
                     <Link
                       key={brandKey}
-                      href={`/${key}/${brand.slug}`}
+                      to={`/${key}/${brand.slug}`}
                       className="text-[#6B6B6B] font-medium hover:text-[#C45C3F] transition-colors py-1"
                       onClick={toggleMobileMenu}
                     >
@@ -192,10 +182,10 @@ export default function Header() {
               </div>
             ))}
 
-            <Link href="/about" className="text-lg font-bold text-[#0D0D0D] border-t border-[#E8E4DE] pt-4 hover:text-[#C45C3F] transition-colors" onClick={toggleMobileMenu}>
+            <Link to="/about" className="text-lg font-bold text-[#0D0D0D] border-t border-[#E8E4DE] pt-4 hover:text-[#C45C3F] transition-colors" onClick={toggleMobileMenu}>
               About Us
             </Link>
-            <Link href="/contact" className="text-lg font-bold text-[#0D0D0D] hover:text-[#C45C3F] transition-colors" onClick={toggleMobileMenu}>
+            <Link to="/contact" className="text-lg font-bold text-[#0D0D0D] hover:text-[#C45C3F] transition-colors" onClick={toggleMobileMenu}>
               Contact
             </Link>
           </div>

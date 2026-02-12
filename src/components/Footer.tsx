@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { siteData } from '@/data/siteData';
 
 export default function Footer() {
@@ -8,7 +8,6 @@ export default function Footer() {
     <footer className="bg-[#0D0D0D] text-white">
       <div className="container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-[#C45C3F] rounded-lg flex items-center justify-center font-bold text-xl font-heading">
@@ -23,23 +22,21 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="text-[#C45C3F] font-semibold text-sm uppercase tracking-wider mb-4">Quick Links</h4>
             <ul className="space-y-3">
-              <li><Link href="/" className="text-gray-400 hover:text-white transition-colors text-sm">Home</Link></li>
-              <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors text-sm">About Us</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">Contact</Link></li>
+              <li><Link to="/" className="text-gray-400 hover:text-white transition-colors text-sm">Home</Link></li>
+              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors text-sm">About Us</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">Contact</Link></li>
             </ul>
           </div>
 
-          {/* Categories */}
           <div>
             <h4 className="text-[#C45C3F] font-semibold text-sm uppercase tracking-wider mb-4">Categories</h4>
             <ul className="space-y-3">
               {categories.map(([key, cat]) => (
                 <li key={key}>
-                  <Link href={`/${key}`} className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link to={`/${key}`} className="text-gray-400 hover:text-white transition-colors text-sm">
                     {cat.title}
                   </Link>
                 </li>
@@ -47,7 +44,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h4 className="text-[#C45C3F] font-semibold text-sm uppercase tracking-wider mb-4">Contact Us</h4>
             <ul className="space-y-4 text-sm text-gray-400">

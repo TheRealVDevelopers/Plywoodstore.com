@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Plywood Stores
 
-## Getting Started
+A React SPA for Plywood Stores - Premium plywood and interior materials dealer.
 
-First, run the development server:
+## Tech Stack
+
+- **React 18** with TypeScript
+- **Vite** - Fast build tool
+- **React Router v6** - Client-side routing
+- **Tailwind CSS** - Styling
+- **Lucide React** - Icons
+
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:5173](http://localhost:5173)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+Output goes to `dist/` folder.
 
-To learn more about Next.js, take a look at the following resources:
+## Preview Production Build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run preview
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+This is a Single Page Application (SPA). Configure your hosting to redirect all routes to `index.html`:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Netlify**: Add `_redirects` with `/* /index.html 200`
+- **Vercel**: Configure `rewrites` in `vercel.json`
+- **Apache**: Use `.htaccess` with `FallbackResource /index.html`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project Structure
+
+```
+src/
+├── components/     # Reusable UI components
+├── data/          # Site data (brands, categories)
+├── pages/         # Route pages
+├── App.tsx        # Root component with router
+├── main.tsx       # Entry point
+└── index.css      # Global styles
+```

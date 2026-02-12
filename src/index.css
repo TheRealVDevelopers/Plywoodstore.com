@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 :root {
-  /* Modern Wood-Inspired Palette */
+  --font-syne: 'Syne', sans-serif;
+  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
   --color-charcoal: #0D0D0D;
   --color-ink: #1A1A1A;
   --color-slate: #2D2D2D;
@@ -13,8 +14,6 @@
   --color-amber: #E8A838;
   --color-warm-gray: #6B6B6B;
   --color-muted: #9A9A9A;
-
-  /* Legacy compatibility */
   --primary-blue: #0D0D0D;
   --dark-blue: #0D0D0D;
   --red-accent: #C45C3F;
@@ -24,8 +23,8 @@
   --gray-100: #F7F4EF;
   --gray-200: #E8E4DE;
   --gray-300: #D4CFC7;
-  --font-heading: var(--font-syne), sans-serif;
-  --font-body: var(--font-jakarta), sans-serif;
+  --font-heading: var(--font-syne);
+  --font-body: var(--font-jakarta);
 }
 
 * {
@@ -56,28 +55,14 @@ a {
   text-decoration: none;
 }
 
-/* Section utilities */
 .section-padding {
   padding: 100px 0;
 }
 
-.section-white {
-  background-color: var(--white);
-}
-
-.section-light {
-  background-color: var(--color-cream);
-}
-
-.section-dark {
-  background-color: var(--color-charcoal);
-  color: var(--white);
-}
-
-.section-navy {
-  background-color: var(--color-charcoal);
-  color: var(--white);
-}
+.section-white { background-color: var(--white); }
+.section-light { background-color: var(--color-cream); }
+.section-dark { background-color: var(--color-charcoal); color: var(--white); }
+.section-navy { background-color: var(--color-charcoal); color: var(--white); }
 
 .container {
   max-width: 1280px;
@@ -135,16 +120,9 @@ a {
   box-shadow: 0 8px 24px rgba(196, 92, 63, 0.35);
 }
 
-/* Animations */
 @keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes marquee {
@@ -160,12 +138,7 @@ a {
   animation: marquee 30s linear infinite;
 }
 
-/* Image utilities */
-.img-cover {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
+.img-cover { object-fit: cover; width: 100%; height: 100%; }
 
 .shadow-card {
   box-shadow: 0 4px 24px rgba(13, 13, 13, 0.06);
@@ -175,10 +148,5 @@ a {
   box-shadow: 0 24px 48px rgba(13, 13, 13, 0.12);
 }
 
-.font-body {
-  font-family: var(--font-body);
-}
-
-.font-heading {
-  font-family: var(--font-heading);
-}
+.font-body { font-family: var(--font-body); }
+.font-heading { font-family: var(--font-heading); }

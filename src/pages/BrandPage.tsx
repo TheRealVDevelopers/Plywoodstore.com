@@ -1,56 +1,29 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import { siteData } from '@/data/siteData';
-import { Metadata } from 'next';
+import { useEffect } from 'react';
+import { Link, useParams, Navigate } from 'react-router-dom';
 import { CheckCircle } from 'lucide-react';
+import { siteData } from '@/data/siteData';
+import Image from '@/components/Image';
 import VideoModal from '@/components/VideoModal';
 import BrandVideoHero from '@/components/BrandVideoHero';
 
-interface BrandPageProps {
-  params: Promise<{
-    category: string;
-    brand: string;
-  }>;
-}
+export default function BrandPage() {
+  const { category: categoryKey, brand: brandKey } = useParams<{ category: string; brand: string }>();
 
-export async function generateMetadata({ params }: BrandPageProps): Promise<Metadata> {
-  const resolvedParams = await params;
-  const categoryData = siteData[resolvedParams.category];
-  const brandData = categoryData?.brands[resolvedParams.brand];
+  const categoryData = categoryKey ? siteData[categoryKey] : undefined;
+  const brand = categoryData?.brands[brandKey || ''];
 
-  if (!brandData) {
-    return { title: 'Brand Not Found' };
-  }
-
-  return {
-    title: brandData.title,
-    description: brandData.description,
-  };
-}
-
-export async function generateStaticParams() {
-  const paths: { category: string; brand: string }[] = [];
-  for (const category of Object.keys(siteData)) {
-    for (const brand of Object.keys(siteData[category].brands)) {
-      paths.push({ category, brand });
+  useEffect(() => {
+    if (brand) {
+      document.title = `${brand.title} | Plywood Stores`;
     }
+  }, [brand]);
+
+  if (!brand || !categoryData) {
+    return <Navigate to="/" replace />;
   }
-  return paths;
-}
-
-export default async function BrandPage({ params }: BrandPageProps) {
-  const resolvedParams = await params;
-  const { category: categoryKey, brand: brandKey } = resolvedParams;
-  const categoryData = siteData[categoryKey];
-  const brand = categoryData?.brands[brandKey];
-
-  if (!brand) notFound();
 
   return (
     <div className="min-h-screen">
-      {/* Hero with Brand Video - Prominent at top */}
       <section className="relative min-h-[85vh] flex items-center justify-center bg-[#0D0D0D] text-white overflow-hidden">
         <BrandVideoHero
           brandName={brand.name}
@@ -60,20 +33,18 @@ export default async function BrandPage({ params }: BrandPageProps) {
         />
       </section>
 
-      {/* Breadcrumb */}
       <div className="bg-white py-4 border-b border-[#E8E4DE]">
         <div className="container text-sm text-[#6B6B6B] flex items-center gap-2">
-          <Link href="/" className="hover:text-[#C45C3F] transition-colors">Home</Link>
+          <Link to="/" className="hover:text-[#C45C3F] transition-colors">Home</Link>
           <span>/</span>
-          <Link href={`/${categoryKey}`} className="hover:text-[#C45C3F] transition-colors capitalize">
-            {categoryData!.title}
+          <Link to={`/${categoryKey}`} className="hover:text-[#C45C3F] transition-colors capitalize">
+            {categoryData.title}
           </Link>
           <span>/</span>
           <span className="text-[#0D0D0D] font-semibold">{brand.name}</span>
         </div>
       </div>
 
-      {/* About */}
       <section className="section-padding bg-white">
         <div className="container grid md:grid-cols-2 gap-16 items-center">
           <div>
@@ -117,7 +88,6 @@ export default async function BrandPage({ params }: BrandPageProps) {
         </div>
       </section>
 
-      {/* Products */}
       <section id="products" className="section-padding bg-[#F7F4EF]">
         <div className="container">
           <h2 className="text-4xl font-bold text-center text-[#0D0D0D] mb-4 font-heading">Product Range</h2>
@@ -156,7 +126,6 @@ export default async function BrandPage({ params }: BrandPageProps) {
         </div>
       </section>
 
-      {/* Application Gallery */}
       <section className="section-padding bg-white">
         <div className="container">
           <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 mb-12">
@@ -165,7 +134,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
               <p className="text-[#6B6B6B]">See how {brand.name} transforms spaces.</p>
             </div>
             <Link
-              href="/contact"
+              to="/contact"
               className="inline-flex text-[#C45C3F] font-semibold hover:underline"
             >
               Get Quote for Project →
@@ -190,7 +159,6 @@ export default async function BrandPage({ params }: BrandPageProps) {
         </div>
       </section>
 
-      {/* Video Showcase - Full section for brand videos */}
       {brand.videos && brand.videos.length > 0 && (
         <section className="section-padding bg-[#0D0D0D] text-white">
           <div className="container">
@@ -200,7 +168,6 @@ export default async function BrandPage({ params }: BrandPageProps) {
         </section>
       )}
 
-      {/* CTA */}
       <section className="py-24 bg-[#C45C3F] text-white text-center">
         <div className="container">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 font-heading">Ready to upgrade your space?</h2>
@@ -209,7 +176,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              to="/contact"
               className="px-10 py-4 bg-white text-[#C45C3F] font-bold text-lg rounded-lg hover:bg-gray-100 transition-colors"
             >
               Request Quote

@@ -1,20 +1,20 @@
 import type { Metadata } from 'next';
-import { Inter, Poppins } from 'next/font/google';
+import { Syne, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 
-const inter = Inter({
+const syne = Syne({
   subsets: ['latin'],
-  variable: '--font-body',
-  weight: ['400', '500', '600']
+  variable: '--font-syne',
+  weight: ['400', '500', '600', '700', '800']
 });
 
-const poppins = Poppins({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['600', '700'],
-  variable: '--font-heading'
+  variable: '--font-jakarta',
+  weight: ['400', '500', '600', '700']
 });
 
 export const metadata: Metadata = {
@@ -29,9 +29,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${poppins.variable} font-body antialiased`}>
+      <body className={`${syne.variable} ${jakarta.variable} font-body antialiased`}>
         <Header />
-        <main>{children}</main>
+        <main className="pt-[120px]">{children}</main>
         <Footer />
         <FloatingWhatsApp />
       </body>
