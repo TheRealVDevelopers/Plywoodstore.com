@@ -42,11 +42,12 @@ export default function Footer() {
           {/* Logo + Intro Row */}
           <div className="py-14 border-b border-white/10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
             <div className="flex items-center gap-5">
-              <Link to="/">
+              <Link to="/" className="flex-shrink-0">
                 <img
                   src="/logo.png"
                   alt="Plywood Stores"
-                  className="h-16 w-auto object-contain brightness-0 invert"
+                  className="h-16 w-auto object-contain"
+                  onError={(e) => { e.currentTarget.style.display = 'none'; }}
                 />
               </Link>
               <div>

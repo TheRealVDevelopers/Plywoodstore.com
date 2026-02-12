@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <>
       {/* Big Heading */}
-      <section className="bg-[#F8FAFC] py-20 -mt-[100px] pt-[120px]">
+      <section className="bg-[#F8FAFC] py-20 -mt-[60px] pt-[80px]">
         <div className="container text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-[#081F44] mb-6">Contact Us</h1>
           <p className="text-xl md:text-2xl text-[#3B4A6B] max-w-2xl mx-auto">

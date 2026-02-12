@@ -15,7 +15,7 @@ export default function App() {
     <>
       <ScrollToTop />
       <Header />
-      <main className="pt-[100px]">
+      <main className="pt-[60px]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

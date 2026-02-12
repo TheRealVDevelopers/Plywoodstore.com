@@ -68,7 +68,7 @@ export default function BrandPage() {
     return (
       <div className="min-h-screen bg-white">
         {/* Hero with video background or image */}
-        <section className="relative h-[70vh] flex items-end overflow-hidden -mt-[100px]">
+        <section className="relative h-[70vh] flex items-end overflow-hidden -mt-[60px]">
           {brand.videos?.[0] ? (
             <iframe
               className="absolute inset-0 w-full h-full scale-[1.3] pointer-events-none"
@@ -80,7 +80,7 @@ export default function BrandPage() {
             <Image src={brand.heroImage} alt={brand.name} fill className="object-cover" priority />
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-          <div className="container relative z-10 pb-14 pt-[100px]">
+          <div className="container relative z-10 pb-14 pt-[60px]">
             <Breadcrumb light />
             <span className="inline-block px-5 py-2 bg-[#A4161A] text-white text-sm font-bold rounded-full mb-5 uppercase tracking-wider">Authorized Dealer</span>
             <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-4">{brand.name}</h1>
@@ -186,7 +186,7 @@ export default function BrandPage() {
     return (
       <div className="min-h-screen bg-[#0A0A0A]">
         {/* Full-screen hero with video */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden -mt-[100px]">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden -mt-[60px]">
           {brand.videos?.[0] ? (
             <iframe
               className="absolute inset-0 w-full h-full scale-[1.3] pointer-events-none"
@@ -198,7 +198,7 @@ export default function BrandPage() {
             <Image src={brand.heroImage} alt={brand.name} fill className="object-cover opacity-30" priority />
           )}
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-[#0A0A0A]" />
-          <div className="container relative z-10 text-center pt-[100px]">
+          <div className="container relative z-10 text-center pt-[60px]">
             <p className="text-[#A4161A] font-bold text-xl uppercase tracking-[0.3em] mb-6">{brand.tagline}</p>
             <h1 className="text-6xl md:text-8xl font-extrabold text-white mb-8 leading-none">{brand.name}</h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10">{brand.description.slice(0, 150)}...</p>
@@ -312,7 +312,7 @@ export default function BrandPage() {
     return (
       <div className="min-h-screen bg-white">
         {/* Hero split with video */}
-        <section className="relative min-h-[85vh] flex items-center -mt-[100px] pt-[100px] bg-[#081F44] overflow-hidden">
+        <section className="relative min-h-[85vh] flex items-center -mt-[60px] pt-[60px] bg-[#081F44] overflow-hidden">
           {brand.videos?.[0] ? (
             <iframe
               className="absolute inset-0 w-full h-full scale-[1.3] pointer-events-none opacity-30"
@@ -447,7 +447,7 @@ export default function BrandPage() {
     return (
       <div className="min-h-screen bg-white">
         {/* Video hero - autoplaying */}
-        <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden -mt-[100px] pt-[100px]">
+        <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden -mt-[60px] pt-[60px]">
           {brand.videos?.[0] ? (
             <iframe
               className="absolute inset-0 w-full h-full scale-[1.3] pointer-events-none"
@@ -578,7 +578,7 @@ export default function BrandPage() {
     return (
       <div className="min-h-screen bg-white">
         {/* Text-only hero with subtle video bg */}
-        <section className="relative min-h-[70vh] flex items-center justify-center bg-[#081F44] -mt-[100px] pt-[100px] overflow-hidden">
+        <section className="relative min-h-[70vh] flex items-center justify-center bg-[#081F44] -mt-[60px] pt-[60px] overflow-hidden">
           {brand.videos?.[0] ? (
             <iframe
               className="absolute inset-0 w-full h-full scale-[1.3] pointer-events-none opacity-20"
@@ -687,7 +687,7 @@ export default function BrandPage() {
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
       {/* Hero with video */}
-      <section className="relative min-h-[85vh] flex items-center justify-center bg-[#081F44] text-white overflow-hidden -mt-[100px] pt-[100px]">
+      <section className="relative min-h-[85vh] flex items-center justify-center bg-[#081F44] text-white overflow-hidden -mt-[60px] pt-[60px]">
         <BrandVideoHero brandName={brand.name} tagline={brand.tagline} heroImage={brand.heroImage} videos={brand.videos} />
       </section>
       <Breadcrumb />

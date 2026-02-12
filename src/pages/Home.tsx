@@ -42,9 +42,9 @@ const applications = [
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden -mt-[100px]">
+    <div className="overflow-x-hidden -mt-[60px]">
       {/* ═══ 1. HERO — stacked plywood sheets background ═══ */}
-      <section className="relative min-h-[85vh] flex items-center pt-[100px]">
+      <section className="relative min-h-[85vh] flex items-center pt-[60px]">
         <div className="absolute inset-0 z-0">
           <Image
             src={IMAGES.heroPlywood}

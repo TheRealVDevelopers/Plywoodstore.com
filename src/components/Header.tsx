@@ -19,34 +19,34 @@ export default function Header() {
   const isCategoryActive = (category: string) => pathname.startsWith(`/${category}`);
 
   const navLinkClass = (active: boolean) =>
-    `px-5 py-3 font-semibold text-lg tracking-[0.5px] transition-colors ${
+    `px-2.5 py-1.5 font-semibold text-[13px] whitespace-nowrap transition-colors ${
       active ? 'text-[#A4161A] font-bold underline decoration-2 underline-offset-4' : 'text-[#081F44] hover:text-[#A4161A]'
     }`;
 
   return (
-    <header className="fixed w-full top-0 left-0 z-50 bg-[#FFFFFF] border-b border-[#E5E7EB] h-[100px] min-h-[90px] flex flex-col justify-center">
-      <div className="w-full max-w-full px-4 sm:px-6 lg:px-12 xl:px-16 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3 flex-shrink-0">
+    <header className="fixed w-full top-0 left-0 z-50 bg-[#FFFFFF] border-b border-[#E5E7EB] h-[60px] flex items-center">
+      <div className="w-full max-w-full px-3 sm:px-4 lg:px-6 xl:px-10 flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-2 flex-shrink-0">
           {!logoError ? (
-            <img src={LOGO_PATH} alt="Plywood Stores" className="h-14 w-auto object-contain min-h-[40px]" onError={() => setLogoError(true)} />
+            <img src={LOGO_PATH} alt="Plywood Stores" className="h-9 w-auto object-contain" onError={() => setLogoError(true)} />
           ) : (
-            <span className="text-xl font-bold text-[#081F44]">Plywood Stores</span>
+            <span className="text-base font-bold text-[#081F44]">Plywood Stores</span>
           )}
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center">
           <Link to="/" className={navLinkClass(isActive('/'))}>Home</Link>
 
           {Object.entries(siteData).map(([key, category]) => (
             <div key={key} className="relative" onMouseEnter={() => handleMouseEnter(key)} onMouseLeave={handleMouseLeave}>
               <Link
                 to={`/${key}`}
-                className={`flex items-center gap-1 px-5 py-3 font-semibold text-lg tracking-[0.5px] transition-colors ${
+                className={`flex items-center gap-0.5 px-2.5 py-1.5 font-semibold text-[13px] whitespace-nowrap transition-colors ${
                   isCategoryActive(key) ? 'text-[#A4161A] font-bold underline decoration-2 underline-offset-4' : 'text-[#081F44] hover:text-[#A4161A]'
                 }`}
               >
                 {category.title}
-                <ChevronDown size={18} className={`transition-transform duration-200 ${activeDropdown === key ? 'rotate-180' : ''}`} />
+                <ChevronDown size={14} className={`transition-transform duration-200 ${activeDropdown === key ? 'rotate-180' : ''}`} />
               </Link>
               <div
                 className={`absolute top-full left-0 mt-0 w-80 bg-white rounded-b-xl shadow-xl border border-t-0 border-[#E5E7EB] overflow-hidden transition-all duration-200 origin-top ${
@@ -70,17 +70,17 @@ export default function Header() {
             </div>
           ))}
 
-          <Link to="/about" className={navLinkClass(isActive('/about'))}>ABOUT US</Link>
+          <Link to="/about" className={navLinkClass(isActive('/about'))}>About</Link>
           <Link to="/contact" className={navLinkClass(isActive('/contact'))}>Contact</Link>
         </nav>
 
-        <div className="hidden lg:flex items-center gap-6">
-          <a href="tel:+919832169125" className="flex items-center gap-2 text-[#081F44] hover:text-[#A4161A] transition-colors font-semibold text-base">
-            <Phone size={18} className="text-[#A4161A]" />
+        <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
+          <a href="tel:+919832169125" className="flex items-center gap-1.5 text-[#081F44] hover:text-[#A4161A] transition-colors font-semibold text-xs whitespace-nowrap">
+            <Phone size={14} className="text-[#A4161A]" />
             +91 98321 69125
           </a>
-          <span className="flex items-center gap-2 text-[#64748B] text-base">
-            <MapPin size={18} className="text-[#A4161A]" />
+          <span className="flex items-center gap-1.5 text-[#64748B] text-xs whitespace-nowrap">
+            <MapPin size={14} className="text-[#A4161A]" />
             HSR Layout, Bengaluru
           </span>
         </div>

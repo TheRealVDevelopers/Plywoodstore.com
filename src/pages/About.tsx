@@ -5,9 +5,9 @@ export default function About() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative min-h-[40vh] flex items-center justify-center text-white bg-[#081F44] overflow-hidden -mt-[100px] pt-[100px]">
+      <section className="relative min-h-[40vh] flex items-center justify-center text-white bg-[#081F44] overflow-hidden -mt-[60px] pt-[60px]">
         <Image
-          src="https://images.unsplash.com/photo-1595846519845-68e298c2edd8?auto=format&fit=crop&q=80"
+          src="https://images.unsplash.com/photo-1697302575756-1605c79a129b?w=1600&auto=format&fit=crop"
           alt="About Plywood Stores"
           fill
           className="object-cover opacity-40"
@@ -34,8 +34,8 @@ export default function About() {
           </div>
           <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
             <Image
-              src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80"
-              alt="Our Showroom"
+              src="https://images.unsplash.com/photo-1614631446501-abcf76949eca?w=1200&auto=format&fit=crop"
+              alt="Plywood and Laminate Products"
               fill
               className="object-cover"
             />
@@ -90,11 +90,20 @@ export default function About() {
         <div className="container">
           <h2 className="text-4xl font-bold mb-12 text-center">Visit Our Store</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="relative h-[280px] bg-white/10 rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center text-white/50 text-lg font-semibold">
-                  Gallery Image {i}
-                </div>
+            {[
+              { src: "https://images.unsplash.com/photo-1758055660736-021f5ec9e247?w=800&auto=format&fit=crop", alt: "Plywood Boards Collection" },
+              { src: "https://images.unsplash.com/photo-1665507279638-5b48073c637b?w=800&auto=format&fit=crop", alt: "Modern Kitchen with Laminates" },
+              { src: "https://images.unsplash.com/photo-1631396326646-c06a935ff3a6?w=800&auto=format&fit=crop", alt: "Carpentry Workshop" }
+            ].map((img, i) => (
+              <div key={i} className="relative h-[280px] rounded-2xl overflow-hidden group">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors" />
+                <p className="absolute bottom-4 left-4 text-white font-bold text-lg">{img.alt}</p>
               </div>
             ))}
           </div>

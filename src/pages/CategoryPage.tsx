@@ -14,9 +14,9 @@ export default function CategoryPage() {
   const brands = Object.entries(data.brands);
 
   return (
-    <div className="min-h-screen -mt-[100px]">
+    <div className="min-h-screen -mt-[60px]">
       {/* ═══ HERO ═══ */}
-      <section className="relative min-h-[55vh] flex items-center justify-center text-white bg-[#081F44] overflow-hidden pt-[100px]">
+      <section className="relative min-h-[55vh] flex items-center justify-center text-white bg-[#081F44] overflow-hidden pt-[60px]">
         <Image
           src={data.heroImage}
           alt={data.title}
