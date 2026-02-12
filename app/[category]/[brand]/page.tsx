@@ -207,7 +207,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
 
                 <div className="container relative z-10">
                     <h2 className="text-3xl font-bold text-white mb-12 text-center border-b border-white/10 pb-6 inline-block w-full">Video Showcase</h2>
-                    <VideoModal videoIds={brand.videos} />
+                    <VideoModal videos={brand.videos} />
                 </div>
             </section>
 

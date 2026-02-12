@@ -5,14 +5,14 @@ import Image from 'next/image';
 import { Play, X } from 'lucide-react';
 
 interface VideoModalProps {
-    videoIds: string[];
+    videos: string[];
 }
 
-export default function VideoModal({ videoIds }: VideoModalProps) {
+export default function VideoModal({ videos }: VideoModalProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [currentVideoId, setCurrentVideoId] = useState('');
 
-    if (!videoIds || videoIds.length === 0) return null;
+    if (!videos || videos.length === 0) return null;
 
     const openModal = (videoId: string) => {
         setCurrentVideoId(videoId);
@@ -27,7 +27,7 @@ export default function VideoModal({ videoIds }: VideoModalProps) {
     return (
         <>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {videoIds.map((id, index) => (
+                {videos.map((id, index) => (
                     <div
                         key={index}
                         className="group relative h-64 bg-gray-900 rounded-lg overflow-hidden shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl border border-white/10"

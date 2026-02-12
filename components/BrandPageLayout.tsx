@@ -109,14 +109,8 @@ export default function BrandPageLayout({ brandId }: BrandPageLayoutProps) {
                 <section className="section-padding bg-dark-blue">
                     <div className="container">
                         <h2 className={styles.sectionTitle} style={{ color: 'white' }}>Product Highlights</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                            {brand.videos.map((video, index) => (
-                                <VideoModal
-                                    key={index}
-                                    videoId={video.videoId}
-                                    title={video.title}
-                                />
-                            ))}
+                        <div className="max-w-4xl mx-auto">
+                            <VideoModal videos={brand.videos.map(v => v.videoId)} />
                         </div>
                     </div>
                 </section>
