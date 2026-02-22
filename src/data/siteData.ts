@@ -111,12 +111,12 @@ export const siteData: Record<string, Category> = {
         videos: ["qM-a-jivEEU"]
       },
       archid: {
-        name: "Archidply",
+        name: "Archidply Decor",
         slug: "archid",
         tagline: "46 Years of Total Interior Solutions",
         description: "Archidply Industries Ltd is one of India's oldest and most respected manufacturers of interior infrastructure products with a 46-year legacy. The company offers a comprehensive range including Platinum Prime (lifetime warranty), Marine BWP, Fire Retardant, MR Grade, BWR Gold, and Shuttering plywood. Their products feature Toxin Check Technology (India's first eco-friendly low-formaldehyde plywood), German Glue Line Technology for 100% borer-proof bonding, and extreme density construction. Publicly listed on BSE & NSE with manufacturing facilities in Uttarakhand and Assam, Archidply has executed prestigious projects including Nita Mukesh Ambani Cultural Centre, Central Vista Delhi, AIIMS Bhatinda, and Bharat Mandapam.",
         heroImage: "https://images.unsplash.com/photo-1588607866562-cad0d77b254a?w=1600&auto=format&fit=crop",
-        title: "Archidply Plywood Authorized Dealer | Platinum Prime, Marine, Fire Retardant",
+        title: "Archidply Decor Plywood Authorized Dealer | Platinum Prime, Marine, Fire Retardant",
         logo: "https://www.archidply.com/wp-content/uploads/2023/01/archidply-logo.png",
         gallery: [
           "https://images.unsplash.com/photo-1588607866562-cad0d77b254a?w=1200&auto=format&fit=crop",
@@ -135,6 +135,27 @@ export const siteData: Record<string, Category> = {
           { name: "Shuttering Plywood", image: "https://images.unsplash.com/photo-1631396326646-c06a935ff3a6?w=1200&auto=format&fit=crop", description: "BWP (Boiling Water Proof) grade with preservative treatment. Manufactured with select hardwood, ~9 layers of veneers pressed at very high temperatures. Withstands load, force, and vibrations during concrete pouring. Moisture and extreme weather resistant. Conforms to Indian Navy W/I standards and IS 4990. Available in 4–19mm, sizes up to 8x3 ft." }
         ],
         videos: ["avGQRB-C3rQ"]
+      },
+      veneer: {
+        name: "Veneer",
+        slug: "veneer",
+        tagline: "Natural Wood Surfaces for Premium Interiors",
+        description: "Wood veneers add the beauty of natural timber to furniture, wall paneling, and interior surfaces. We supply decorative veneers in a variety of species and finishes — teak, oak, walnut, maple, and more — for architects, interior designers, and furniture manufacturers. Veneers are used for doors, cabinets, tabletops, and accent walls to achieve a high-end look at a fraction of solid wood cost.",
+        heroImage: "https://images.unsplash.com/photo-1504274066651-8d31a536b11a?w=1600&auto=format&fit=crop",
+        title: "Wood Veneer | Decorative Veneer Dealer",
+        logo: "",
+        gallery: [
+          "https://images.unsplash.com/photo-1614631446501-abcf76949eca?w=1200&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1697302575756-1605c79a129b?w=1200&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1588607866562-cad0d77b254a?w=1200&auto=format&fit=crop"
+        ],
+        products: [
+          { name: "Teak Veneer", image: "https://images.unsplash.com/photo-1697302575756-1605c79a129b?w=1200&auto=format&fit=crop", description: "Premium teak wood veneer sheets for furniture and paneling. Natural durability and rich grain. Available in natural and stained finishes." },
+          { name: "Oak Veneer", image: "https://images.unsplash.com/photo-1504274066651-8d31a536b11a?w=1200&auto=format&fit=crop", description: "European and American oak veneers for cabinets, doors, and interior surfaces. Consistent grain and quality for professional applications." },
+          { name: "Walnut & Maple Veneer", image: "https://images.unsplash.com/photo-1614631446501-abcf76949eca?w=1200&auto=format&fit=crop", description: "Decorative veneers in walnut, maple, and other species. Ideal for tabletops, accent walls, and designer furniture." }
+        ],
+        videos: []
       }
     }
   },
@@ -429,7 +450,7 @@ export const siteData: Record<string, Category> = {
   },
   "particle-boards": {
     title: "Particle Boards",
-    description: "Economical and lightweight pre-laminated and plain particle boards for modern modular furniture.",
+    description: "About Particle Boards — Economical and lightweight pre-laminated and plain particle boards for modern modular furniture. We supply quality particle boards from trusted brands including Merino, Century, and Greenlam for wardrobes, kitchen cabinets, and office furniture across North India.",
     heroImage: "https://images.unsplash.com/photo-1756364898034-61949e14ba00?w=1200&auto=format&fit=crop",
     brands: {
       merino: {
@@ -491,25 +512,6 @@ export const siteData: Record<string, Category> = {
           { name: "Plain Chipboard", image: "https://images.unsplash.com/photo-1758055660736-021f5ec9e247?w=1200&auto=format&fit=crop", description: "Unfinished particle boards for custom lamination. Consistent density and smooth surface for reliable results." }
         ],
         videos: []
-      },
-      unbranded: {
-        name: "Commercial Grade",
-        slug: "unbranded",
-        tagline: "Economical Solutions for Budget Projects",
-        description: "Quality commercial-grade particle boards for cost-effective furniture and interior applications. These boards offer reliable performance at competitive prices, making them suitable for rental properties, budget renovations, and temporary installations.",
-        heroImage: "https://images.unsplash.com/photo-1756364898034-61949e14ba00?w=1600&auto=format&fit=crop",
-        title: "Commercial Grade Particle Boards",
-        logo: "",
-        gallery: [
-          "https://images.unsplash.com/photo-1758630737403-1bda34e3f98e?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1668026694348-b73c5eb5e299?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1631396326646-c06a935ff3a6?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1662454419622-a41092ecd245?w=1200&auto=format&fit=crop"
-        ],
-        products: [
-          { name: "Plain Particle Board 8×4", image: "https://images.unsplash.com/photo-1758055660736-021f5ec9e247?w=1200&auto=format&fit=crop", description: "Standard particle boards for lamination and painting. Available in 8mm, 12mm, 16mm, 18mm, and 25mm thicknesses." }
-        ],
-        videos: []
       }
     }
   },
@@ -539,14 +541,14 @@ export const siteData: Record<string, Category> = {
         ],
         videos: ["HbMvJ2FRdvs"]
       },
-      abco: {
-        name: "ABCO",
-        slug: "abco",
-        tagline: "Durable Fittings for Every Furniture Need",
-        description: "ABCO is a reliable hardware solutions brand offering a comprehensive range of furniture fittings for residential and commercial applications. Known for competitive pricing without compromising on quality, ABCO products include cabinet hinges, drawer channels, handles, tower bolts, and various furniture accessories.",
+      ebco: {
+        name: "EBCO",
+        slug: "ebco",
+        tagline: "Quality Hardware for Every Furniture Need",
+        description: "EBCO is a trusted hardware solutions brand offering a comprehensive range of furniture fittings for residential and commercial applications. Known for durable products and competitive pricing, EBCO's range includes cabinet hinges, drawer channels, handles, tower bolts, and various furniture accessories for kitchens, wardrobes, and modular interiors.",
         heroImage: "https://images.unsplash.com/photo-1769326541255-c6612ab334a0?w=1600&auto=format&fit=crop",
-        title: "ABCO Hardware Dealer | Furniture Fittings",
-        logo: "https://virgolam.com/wp-content/themes/virgolam/assets/images/logos/lam-abco.png",
+        title: "EBCO Hardware Dealer | Furniture Fittings",
+        logo: "",
         gallery: [
           "https://plus.unsplash.com/premium_photo-1663011078369-1613ac0a4758?w=1200&auto=format&fit=crop",
           "https://plus.unsplash.com/premium_photo-1676890863093-b944dda91e23?w=1200&auto=format&fit=crop",

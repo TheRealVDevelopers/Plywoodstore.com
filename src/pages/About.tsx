@@ -1,5 +1,15 @@
 import { Link } from 'react-router-dom';
 import Image from '@/components/Image';
+import { siteData } from '@/data/siteData';
+
+const BRANDS_WE_DEAL_WITH = [
+  { name: 'Century Ply', logo: siteData.plywood?.brands?.century?.logo ?? '' },
+  { name: 'Greenply', logo: siteData.plywood?.brands?.greenply?.logo ?? '' },
+  { name: 'Merino', logo: siteData.laminates?.brands?.merino?.logo ?? siteData['particle-boards']?.brands?.merino?.logo ?? '' },
+  { name: 'Hettich', logo: siteData.hardware?.brands?.hettich?.logo ?? '' },
+  { name: 'Greenlam', logo: siteData.laminates?.brands?.greenlam?.logo ?? siteData['particle-boards']?.brands?.greenlam?.logo ?? '' },
+  { name: 'EBCO', logo: siteData.hardware?.brands?.ebco?.logo ?? '' },
+];
 
 export default function About() {
   return (
@@ -26,10 +36,10 @@ export default function About() {
           <div>
             <h2 className="text-4xl font-bold text-[#081F44] mb-6">Who We Are</h2>
             <p className="text-lg text-[#3B4A6B] mb-4 leading-relaxed">
-              Plywood Stores is a leading supplier of premium plywood, laminates, MDF boards, hardware fittings and adhesives. Serving contractors, architects and interior professionals, the company focuses on quality, durability and long-term trust.
+              Plywood Stores is a leading supplier of premium plywood, laminates, MDF boards, particle boards, hardware fittings and adhesives. Serving contractors, architects and interior professionals across North India, we focus on quality, durability and long-term trust.
             </p>
             <p className="text-lg text-[#3B4A6B] mb-4 leading-relaxed">
-              With partnerships across top brands like Century, Greenply, Merino and Hettich, the store ensures genuine products and competitive pricing.
+              With partnerships across top brands like Century Ply, Greenply, Merino, Hettich and EBCO, we ensure genuine products and competitive pricing.
             </p>
           </div>
           <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
@@ -75,10 +85,21 @@ export default function About() {
       <section className="py-24 bg-[#F8FAFC]">
         <div className="container text-center">
           <h2 className="text-4xl font-bold text-[#081F44] mb-12">Brands We Deal With</h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            {['Century Ply', 'Greenply', 'Merino', 'Hettich', 'Greenlam', 'Stylam', 'Ozone', 'Fevicol'].map((brand) => (
-              <div key={brand} className="text-xl font-bold px-8 py-4 border-2 border-[#E5E7EB] rounded-xl hover:border-[#A4161A] hover:text-[#A4161A] transition cursor-default">
-                {brand}
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+            {BRANDS_WE_DEAL_WITH.map(({ name, logo }) => (
+              <div key={name} className="flex flex-col items-center justify-center gap-3 p-6 rounded-2xl border-2 border-[#E5E7EB] hover:border-[#A4161A] transition-all bg-white min-w-[140px]">
+                {logo ? (
+                  <>
+                    <img
+                      src={logo}
+                      alt={`${name} logo`}
+                      className="h-14 w-auto max-w-[120px] object-contain grayscale hover:grayscale-0 transition-all"
+                      onError={(e) => { const t = e.currentTarget; t.style.display = 'none'; const next = t.nextElementSibling as HTMLElement; if (next) next.classList.remove('hidden'); }}
+                    />
+                    <span className="hidden text-lg font-bold text-[#081F44]">{name}</span>
+                  </>
+                ) : null}
+                <span className={`text-sm font-semibold text-[#64748B] ${!logo ? 'text-lg font-bold text-[#081F44]' : ''}`}>{name}</span>
               </div>
             ))}
           </div>

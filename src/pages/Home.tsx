@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Phone, Shield, Truck, Award } from 'lucide-react';
+import { ArrowRight, Phone, Shield, Truck, Award, Volume2, VolumeX } from 'lucide-react';
 import { siteData } from '@/data/siteData';
 import Image from '@/components/Image';
 
@@ -36,11 +37,11 @@ const applications = [
   { name: 'Kitchen',    image: IMAGES.kitchen },
   { name: 'Office',     image: IMAGES.office },
   { name: 'Bedroom',    image: IMAGES.bedroom },
-  { name: 'Commercial', image: IMAGES.commercial },
   { name: 'Retail',     image: IMAGES.retail },
 ];
 
 export default function Home() {
+  const [videoMuted, setVideoMuted] = useState(true);
   return (
     <div className="overflow-x-hidden -mt-[60px]">
       {/* ═══ 1. HERO — stacked plywood sheets background ═══ */}
@@ -59,7 +60,7 @@ export default function Home() {
         <div className="container relative z-10 py-16">
           <div className="max-w-2xl">
             <h1 className="text-[56px] md:text-[64px] font-extrabold leading-[1.05] tracking-tight text-[#081F44] mb-6">
-              Premium Plywood &amp; Interiors for Every Space
+              Premium Interiors Products for Every Space
             </h1>
             <p className="text-xl text-[#3B4A6B] leading-relaxed mb-8">
               India&apos;s trusted supplier of plywood, laminates, MDF and hardware. Authorized dealers for Century, Greenply, Merino, Hettich and more.
@@ -86,13 +87,22 @@ export default function Home() {
       <section className="relative w-full h-[80vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <iframe
           className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-          src={`https://www.youtube.com/embed/${HERO_VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${HERO_VIDEO_ID}&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1`}
+          src={`https://www.youtube.com/embed/${HERO_VIDEO_ID}?autoplay=1&mute=${videoMuted ? '1' : '0'}&loop=1&playlist=${HERO_VIDEO_ID}&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1`}
           title="Plywood Stores — Quality That Builds Trust"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 text-center px-4">
+        <div className="absolute inset-0 bg-black/40 pointer-events-none" />
+        <div className="relative z-10 flex flex-col items-center justify-center gap-6 text-center px-4">
           <h2 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg">Quality That Builds Trust</h2>
+          <button
+            type="button"
+            onClick={() => setVideoMuted(!videoMuted)}
+            className="flex items-center gap-2 px-5 py-2.5 bg-white/20 hover:bg-white/30 text-white font-bold rounded-lg backdrop-blur-sm transition-all border border-white/30"
+            aria-label={videoMuted ? 'Unmute video' : 'Mute video'}
+          >
+            {videoMuted ? <Volume2 className="w-5 h-5" /> : <VolumeX className="w-5 h-5" />}
+            {videoMuted ? 'Unmute' : 'Mute'}
+          </button>
         </div>
       </section>
 
@@ -123,7 +133,7 @@ export default function Home() {
                 Plywood Stores is a leading supplier of premium plywood, laminates, MDF boards, hardware fittings and adhesives. Serving contractors, architects and interior professionals across North India, we focus on quality, durability and long-term trust.
               </p>
               <p className="text-lg text-[#3B4A6B] leading-relaxed mb-6">
-                With partnerships across top brands like Century, Greenply, Merino and Hettich, we ensure genuine products and competitive pricing. Bulk orders for projects, dealer support, and expert advice — all under one roof.
+                With partnerships across top brands like Century Ply, Greenply, Merino, Hettich and EBCO, we ensure genuine products and competitive pricing. Bulk orders for projects, dealer support, and expert advice — all under one roof.
               </p>
               <Link to="/about" className="inline-flex items-center gap-2 px-8 py-4 bg-[#081F44] text-white font-bold rounded-lg hover:bg-[#0A2A5C] transition-all">
                 Learn More <ArrowRight className="w-5 h-5" />

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, MapPin, Clock } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -83,19 +83,8 @@ export default function Contact() {
                     <Phone size={28} className="text-white" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#081F44] text-lg mb-1">Call Us</h4>
+                    <h4 className="font-bold text-[#081F44] text-lg mb-1">Call</h4>
                     <p className="text-[#3B4A6B] text-base">+91 98321 69125</p>
-                    <p className="text-[#3B4A6B] text-base">+91 11 2345 6789</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4 p-6 bg-[#F8FAFC] rounded-xl border-2 border-[#E5E7EB]">
-                  <div className="w-14 h-14 bg-[#A4161A] rounded-full flex items-center justify-center flex-shrink-0">
-                    <Mail size={28} className="text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-[#081F44] text-lg mb-1">Email Us</h4>
-                    <p className="text-[#3B4A6B] text-base">info@plywoodstores.com</p>
-                    <p className="text-[#3B4A6B] text-base">sales@plywoodstores.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 p-6 bg-[#F8FAFC] rounded-xl border-2 border-[#E5E7EB]">

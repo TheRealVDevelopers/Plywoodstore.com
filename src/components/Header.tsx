@@ -28,9 +28,9 @@ export default function Header() {
       <div className="w-full max-w-full px-3 sm:px-4 lg:px-6 xl:px-10 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 flex-shrink-0">
           {!logoError ? (
-            <img src={LOGO_PATH} alt="Plywood Stores" className="h-9 w-auto object-contain" onError={() => setLogoError(true)} />
+            <img src={LOGO_PATH} alt="Plywood Stores" className="h-9 w-auto object-contain drop-shadow-md" onError={() => setLogoError(true)} />
           ) : (
-            <span className="text-base font-bold text-[#081F44]">Plywood Stores</span>
+            <span className="text-base font-extrabold text-[#081F44]">Plywood Stores</span>
           )}
         </Link>
 
@@ -95,9 +95,9 @@ export default function Header() {
       <div className={`lg:hidden fixed top-0 right-0 h-full w-[85%] max-w-sm bg-white z-50 shadow-2xl transform transition-transform duration-300 ease-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="p-6 border-b border-[#E5E7EB] flex justify-between items-center">
           {!logoError ? (
-            <img src={LOGO_PATH} alt="Plywood Stores" className="h-12 w-auto object-contain min-h-[36px]" onError={() => setLogoError(true)} />
+            <img src={LOGO_PATH} alt="Plywood Stores" className="h-12 w-auto object-contain min-h-[36px] drop-shadow-md" onError={() => setLogoError(true)} />
           ) : (
-            <span className="text-lg font-bold text-[#081F44]">Plywood Stores</span>
+            <span className="text-lg font-extrabold text-[#081F44]">Plywood Stores</span>
           )}
           <button onClick={toggleMobileMenu} className="p-2 hover:bg-gray-100 rounded-lg transition-colors"><X size={24} /></button>
         </div>

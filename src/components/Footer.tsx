@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { siteData } from '@/data/siteData';
-import { Phone, Mail, MapPin, ArrowRight, Clock, ExternalLink } from 'lucide-react';
+import { Phone, MapPin, ArrowRight, Clock, ExternalLink } from 'lucide-react';
 
 export default function Footer() {
   const categories = Object.entries(siteData);
@@ -64,13 +64,6 @@ export default function Footer() {
               >
                 <Phone className="w-4 h-4 text-[#A4161A]" />
                 <span className="font-semibold">+91 98321 69125</span>
-              </a>
-              <a
-                href="mailto:info@plywoodstores.com"
-                className="flex items-center gap-2.5 px-5 py-2.5 bg-white/5 border border-white/10 rounded-full text-white/90 hover:bg-white/10 hover:text-white transition-all"
-              >
-                <Mail className="w-4 h-4 text-[#A4161A]" />
-                <span className="font-semibold">info@plywoodstores.com</span>
               </a>
               <div className="flex items-center gap-2.5 px-5 py-2.5 bg-white/5 border border-white/10 rounded-full text-white/90">
                 <Clock className="w-4 h-4 text-[#A4161A]" />
