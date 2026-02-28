@@ -130,7 +130,7 @@ export default function Home() {
             <div>
               <h2 className="text-4xl font-extrabold text-[#081F44] mb-6">About Our Store</h2>
               <p className="text-lg text-[#3B4A6B] leading-relaxed mb-6">
-                Plywood Stores is a leading supplier of premium plywood, laminates, MDF boards, hardware fittings and adhesives. Serving contractors, architects and interior professionals across North India, we focus on quality, durability and long-term trust.
+                Plywood Stores is a leading supplier of premium plywood, laminates, MDF boards, hardware fittings and adhesives. Serving contractors, architects and interior professionals across South India, we focus on quality, durability and long-term trust.
               </p>
               <p className="text-lg text-[#3B4A6B] leading-relaxed mb-6">
                 With partnerships across top brands like Century Ply, Greenply, Merino, Hettich and EBCO, we ensure genuine products and competitive pricing. Bulk orders for projects, dealer support, and expert advice — all under one roof.

@@ -39,9 +39,9 @@ export const siteData: Record<string, Category> = {
                 title: "Century Ply Authorized Dealer | Marine & Commercial Plywood",
                 logo: "",
                 gallery: [
-                    "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80",
-                    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80",
-                    "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&q=80",
+                    "/images/playwood/century/gallery-1.jpg.jpg",
+                    "/images/playwood/century/gallery-2.jpg.jpg",
+                    "/images/playwood/century/gallery-3.jpg.jpg",
                     "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80"
                 ],
                 products: [
@@ -643,3 +643,4 @@ export const siteData: Record<string, Category> = {
         }
     }
 };
+

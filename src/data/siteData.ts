@@ -39,21 +39,21 @@ export const siteData: Record<string, Category> = {
         title: "Century Ply Authorized Dealer | Marine & Commercial Plywood",
         logo: "https://centuryply.com/img/logo-new.png",
         gallery: [
-          "https://images.unsplash.com/photo-1697302575756-1605c79a129b?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1700973408133-b45276ec8feb?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1588607866562-cad0d77b254a?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1566373924413-3efde9d6eb67?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1739204618173-3e89def7140f?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1761656630581-69a58e4e1c09?w=1200&auto=format&fit=crop"
+          "/images/playwood/century/gallery-1.jpg.jpg",
+          "/images/playwood/century/gallery-2.jpg.jpg",
+          "/images/playwood/century/gallery-3.jpg.jpg",
+          "/images/playwood/century/gallery-1.jpg.jpg",
+         "/images/playwood/century/gallery-2.jpg.jpg",
+          "/images/playwood/century/gallery-3.jpg.jpg"
         ],
         products: [
-          { name: "Architect Ply", image: "https://images.unsplash.com/photo-1697302575756-1605c79a129b?w=1200&auto=format&fit=crop", description: "CenturyPly's flagship luxury BWP marine-grade plywood with Lifetime Warranty. Features advanced Firewall (fire-retardant) and ViroKill (antiviral) technology. 100% borer & termite-proof with GLP. Gurjan face, Phenol Formaldehyde resin bonding. Water absorption <5%, Glue Shear Strength >1450N. Available in 4mm to 25mm thickness." },
-          { name: "Club Prime 710", image: "https://images.unsplash.com/photo-1439668462223-e88f0ad95063?w=1200&auto=format&fit=crop", description: "CenturyPly's premium BWP marine-grade plywood with 30-year warranty. Features Virokill Technology (99.9% virus elimination), Firewall Technology (fire resistance up to 50 min), and 65% stronger glue shear strength. IS:710 certified. Available in 4mm to 25mm thickness." },
-          { name: "Sainik 710", image: "https://images.unsplash.com/photo-1756364898034-61949e14ba00?w=1200&auto=format&fit=crop", description: "Affordable waterproof plywood with IS:710 certification. Offers enhanced bending resistance, less than 5% water absorption, and chemical treatment for borer & termite protection. Comes with an 8-year warranty and uniform pricing across India." },
-          { name: "Classic Marine", image: "https://images.unsplash.com/photo-1686023858216-4f54c853acf2?w=1200&auto=format&fit=crop", description: "Innovative waterproof plywood in the premium economy segment. Features patented GLP technology for superior termite & borer defence. Quadrapress technology ensures performance tolerance. Virus & fungus proof. Specific Gravity >0.68, Water absorption <5%. 25-year warranty. Available in 4mm to 25mm." },
-          { name: "Win MR", image: "https://images.unsplash.com/photo-1611600700192-d87eaeed4f81?w=1200&auto=format&fit=crop", description: "Premium quality and durability at an affordable cost. Eco-friendly plywood made from seasoned wood with extra ply layers for added strength. Water resistant MR grade. Screw holding >165 Kg, Nail holding >75 Kg. IS 303 MR certified with 5-year warranty. Available in 4mm to 18mm." },
-          { name: "Sainik MR", image: "https://images.unsplash.com/photo-1758055660736-021f5ec9e247?w=1200&auto=format&fit=crop", description: "The only water resistant plywood in its price range. Bend-resistant, weather-resistant, dimensionally stable, and swell-proof. Borer & termite proof. Screw holding >165 Kg, Water absorption <5%. IS 303 MR certified with 5-year warranty. Available in 4mm to 18mm." },
-          { name: "Bond 710", image: "https://images.unsplash.com/photo-1504274066651-8d31a536b11a?w=1200&auto=format&fit=crop", description: "Special BWP marine-grade plywood featuring Quadra Press Technology for high strength. Built with more plies for increased structural integrity, borer & termite proof with GLP formula. 15-year warranty and IS:710 compliant." }
+          { name: "Architect Ply", image: "/images/playwood/century/gallery-1.jpg.jpg", description: "CenturyPly's flagship luxury BWP marine-grade plywood with Lifetime Warranty. Features advanced Firewall (fire-retardant) and ViroKill (antiviral) technology. 100% borer & termite-proof with GLP. Gurjan face, Phenol Formaldehyde resin bonding. Water absorption <5%, Glue Shear Strength >1450N. Available in 4mm to 25mm thickness." },
+          { name: "Club Prime 710", image: "/images/playwood/century/gallery-2.jpg.jpg", description: "CenturyPly's premium BWP marine-grade plywood with 30-year warranty. Features Virokill Technology (99.9% virus elimination), Firewall Technology (fire resistance up to 50 min), and 65% stronger glue shear strength. IS:710 certified. Available in 4mm to 25mm thickness." },
+          { name: "Sainik 710", image: "/images/playwood/century/gallery-3.jpg.jpg", description: "Affordable waterproof plywood with IS:710 certification. Offers enhanced bending resistance, less than 5% water absorption, and chemical treatment for borer & termite protection. Comes with an 8-year warranty and uniform pricing across India." },
+          { name: "Classic Marine", image: "/images/playwood/century/gallery-1.jpg.jpg", description: "Innovative waterproof plywood in the premium economy segment. Features patented GLP technology for superior termite & borer defence. Quadrapress technology ensures performance tolerance. Virus & fungus proof. Specific Gravity >0.68, Water absorption <5%. 25-year warranty. Available in 4mm to 25mm." },
+          { name: "Win MR", image: "/images/playwood/century/gallery-2.jpg.jpg", description: "Premium quality and durability at an affordable cost. Eco-friendly plywood made from seasoned wood with extra ply layers for added strength. Water resistant MR grade. Screw holding >165 Kg, Nail holding >75 Kg. IS 303 MR certified with 5-year warranty. Available in 4mm to 18mm." },
+          { name: "Sainik MR", image: "/images/playwood/century/gallery-3.jpg.jpg", description: "The only water resistant plywood in its price range. Bend-resistant, weather-resistant, dimensionally stable, and swell-proof. Borer & termite proof. Screw holding >165 Kg, Water absorption <5%. IS 303 MR certified with 5-year warranty. Available in 4mm to 18mm." },
+          { name: "Bond 710", image: "/images/playwood/century/gallery-1.jpg.jpg", description: "Special BWP marine-grade plywood featuring Quadra Press Technology for high strength. Built with more plies for increased structural integrity, borer & termite proof with GLP formula. 15-year warranty and IS:710 compliant." }
         ],
         videos: ["lIl5xx7tP3w", "ATOwSep_B0k"]
       },
@@ -66,21 +66,24 @@ export const siteData: Record<string, Category> = {
         title: "Greenply Authorized Dealer | Eco-friendly Plywood Solutions",
         logo: "https://www.greenply.com/assets/images/logo.svg",
         gallery: [
-          "https://images.unsplash.com/photo-1700973408133-b45276ec8feb?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1690768162439-7ca7a1813038?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1566373924413-3efde9d6eb67?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1629976828074-c248d94c82ea?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1588607866562-cad0d77b254a?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1617873229215-11589e502703?w=1200&auto=format&fit=crop"
+          "/images/playwood/century/gallery-1.jpg.jpg",
+          "/images/playwood/century/gallery-2.jpg.jpg",
+          "/images/playwood/century/gallery-3.jpg.jpg",
+          "/images/playwood/century/gallery-1.jpg.jpg",
+          "/images/playwood/century/gallery-2.jpg.jpg",
+          "/images/playwood/century/gallery-3.jpg.jpg",
+          "/images/playwood/century/gallery-1.jpg.jpg",
+          "/images/playwood/century/gallery-2.jpg.jpg",
+          "/images/playwood/century/gallery-3.jpg.jpg"
         ],
         products: [
-          { name: "Greenply Gold", image: "https://images.unsplash.com/photo-1697302575756-1605c79a129b?w=1200&auto=format&fit=crop", description: "Premium BWP (Boiling Water Proof) marine-grade plywood with IS 710 certification. Features Virashield anti-viral & anti-bacterial technology, zero formaldehyde emission (E0 CARB Certified), and 4 Press Technology for superior strength. Calibrated thickness with 100% composed hardwood core. Borer-fungus proof & anti-termite guaranteed. Available in 4mm to 25mm thickness, 8x4 ft sheets. 30-year warranty. Ideal for luxury modular kitchens, premium wardrobes, and moisture-prone areas." },
-          { name: "Greenply Gold 2.0", image: "https://images.unsplash.com/photo-1439668462223-e88f0ad95063?w=1200&auto=format&fit=crop", description: "Next-gen premium BWP/Marine grade plywood with IS 710 certification. Engineered with 100% composed core & panel precisely stitched with hot melt glue. Ultimate waterproof & fire safe, zero formaldehyde emission (CARB Certified), Virashield anti-viral & anti-bacterial, 4 Press Technology, calibrated. Borer-fungus proof & anti-termite guaranteed (IS 5539 treated). Available in 9mm & 19mm, 8x4 ft sheets. 30-year warranty." },
-          { name: "Greenply Club 700", image: "https://images.unsplash.com/photo-1756364898034-61949e14ba00?w=1200&auto=format&fit=crop", description: "Premium BWP plywood with 17-layer construction for enhanced durability. Structural Grade IS 10701 Certified. 2X Fire Retardant and 2X Waterproof with acoustic properties. Zero formaldehyde emission (CARB Certified), Virashield anti-viral & anti-bacterial. Borer-fungus-termite proof. Available in 4mm to 25mm thickness, 8x4 ft sheets. Lifetime warranty." },
-          { name: "Greenply Club 500", image: "https://images.unsplash.com/photo-1611600700192-d87eaeed4f81?w=1200&auto=format&fit=crop", description: "BWP grade plywood with excellent strength and load-bearing capacity. Structural Grade IS 10701 Certified, fire safe. Zero formaldehyde emission (CARB Certified), Virashield anti-viral & anti-bacterial. Smooth finish ideal for lamination and polishing. Borer-fungus-termite proof. Available in 6mm to 25mm, 8x4 ft sheets. Lifetime warranty." },
-          { name: "Greenply Platinum", image: "https://images.unsplash.com/photo-1758055660736-021f5ec9e247?w=1200&auto=format&fit=crop", description: "High-performance BWP plywood with IS 710 marine-grade certification. 100% composed core with selected hardwood species, 4 Press Technology for precision and tensile strength. E0 & E1 certified zero emission, Virashield anti-viral & anti-bacterial. Borer-proof, termite-resistant, fungus-resistant. Available in 6mm to 19mm, 8x4 ft sheets. 25-year warranty." },
-          { name: "Greenply 710 Marine", image: "https://images.unsplash.com/photo-1504274066651-8d31a536b11a?w=1200&auto=format&fit=crop", description: "Specialized BWP marine-grade plywood certified to IS 710 standard. 100% composed core with selected hardwood species, 4 Press Technology. Virashield anti-viral & anti-bacterial, E0 zero formaldehyde emission certified. Borer-fungus proof with anti-termite guarantee. Available in 6mm to 19mm, 8x4 ft sheets. 25-year warranty. Purpose-built for kitchen cabinets, bathroom vanities, and exterior-exposed furniture." },
-          { name: "Ecotec Platinum", image: "https://images.unsplash.com/photo-1643902917449-98c7ef8c9685?w=1200&auto=format&fit=crop", description: "Eco-friendly low formaldehyde emission plywood at value-for-money pricing. BWP Grade (72 hrs boiling water proof), IS 303 Certified with 10-point quality check. Calibrated thickness, Virashield anti-viral & anti-bacterial. Borer-fungus proof & anti-termite guaranteed. Available in 6mm to 25mm, 8x4 ft sheets. 15-year warranty." }
+          { name: "Greenply Gold", image: "/images/playwood/century/gallery-1.jpg.jpg", description: "Premium BWP (Boiling Water Proof) marine-grade plywood with IS 710 certification. Features Virashield anti-viral & anti-bacterial technology, zero formaldehyde emission (E0 CARB Certified), and 4 Press Technology for superior strength. Calibrated thickness with 100% composed hardwood core. Borer-fungus proof & anti-termite guaranteed. Available in 4mm to 25mm thickness, 8x4 ft sheets. 30-year warranty. Ideal for luxury modular kitchens, premium wardrobes, and moisture-prone areas." },
+          { name: "Greenply Gold 2.0", image:  "/images/playwood/century/gallery-2.jpg.jpg", description: "Next-gen premium BWP/Marine grade plywood with IS 710 certification. Engineered with 100% composed core & panel precisely stitched with hot melt glue. Ultimate waterproof & fire safe, zero formaldehyde emission (CARB Certified), Virashield anti-viral & anti-bacterial, 4 Press Technology, calibrated. Borer-fungus proof & anti-termite guaranteed (IS 5539 treated). Available in 9mm & 19mm, 8x4 ft sheets. 30-year warranty." },
+          { name: "Greenply Club 700", image: "/images/playwood/century/gallery-3.jpg.jpg", description: "Premium BWP plywood with 17-layer construction for enhanced durability. Structural Grade IS 10701 Certified. 2X Fire Retardant and 2X Waterproof with acoustic properties. Zero formaldehyde emission (CARB Certified), Virashield anti-viral & anti-bacterial. Borer-fungus-termite proof. Available in 4mm to 25mm thickness, 8x4 ft sheets. Lifetime warranty." },
+          { name: "Greenply Club 500", image: "/images/playwood/century/gallery-1.jpg.jpg", description: "BWP grade plywood with excellent strength and load-bearing capacity. Structural Grade IS 10701 Certified, fire safe. Zero formaldehyde emission (CARB Certified), Virashield anti-viral & anti-bacterial. Smooth finish ideal for lamination and polishing. Borer-fungus-termite proof. Available in 6mm to 25mm, 8x4 ft sheets. Lifetime warranty." },
+          { name: "Greenply Platinum", image: "/images/playwood/century/gallery-2.jpg.jpg", description: "High-performance BWP plywood with IS 710 marine-grade certification. 100% composed core with selected hardwood species, 4 Press Technology for precision and tensile strength. E0 & E1 certified zero emission, Virashield anti-viral & anti-bacterial. Borer-proof, termite-resistant, fungus-resistant. Available in 6mm to 19mm, 8x4 ft sheets. 25-year warranty." },
+          { name: "Greenply 710 Marine", image: "/images/playwood/century/gallery-3.jpg.jpg", description: "Specialized BWP marine-grade plywood certified to IS 710 standard. 100% composed core with selected hardwood species, 4 Press Technology. Virashield anti-viral & anti-bacterial, E0 zero formaldehyde emission certified. Borer-fungus proof with anti-termite guarantee. Available in 6mm to 19mm, 8x4 ft sheets. 25-year warranty. Purpose-built for kitchen cabinets, bathroom vanities, and exterior-exposed furniture." },
+          { name: "Ecotec Platinum", image: "/images/playwood/century/gallery-1.jpg.jpg", description: "Eco-friendly low formaldehyde emission plywood at value-for-money pricing. BWP Grade (72 hrs boiling water proof), IS 303 Certified with 10-point quality check. Calibrated thickness, Virashield anti-viral & anti-bacterial. Borer-fungus proof & anti-termite guaranteed. Available in 6mm to 25mm, 8x4 ft sheets. 15-year warranty." }
         ],
         videos: ["hqIxw19wvWw", "B7EvtzB0V9k"]
       },
@@ -93,20 +96,20 @@ export const siteData: Record<string, Category> = {
         title: "Mikasa Plywood Authorized Dealer | Sapphire, Marine Blue, BWP+, MR+, Fire Guardian",
         logo: "https://www.mikasaply.com/images/logo.png",
         gallery: [
-          "https://images.unsplash.com/photo-1700973408133-b45276ec8feb?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1508948414348-13a52d2ec394?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1690768162439-7ca7a1813038?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1566373924413-3efde9d6eb67?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1629976828074-c248d94c82ea?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1611072337226-1140ab367200?w=1200&auto=format&fit=crop"
+          "/images/playwood/century/gallery-1.jpg.jpg",
+          "/images/playwood/century/gallery-2.jpg.jpg",
+          "/images/playwood/century/gallery-3.jpg.jpg",
+          "/images/playwood/century/gallery-1.jpg.jpg",
+          "/images/playwood/century/gallery-2.jpg.jpg",
+          "/images/playwood/century/gallery-3.jpg.jpg"
         ],
         products: [
-          { name: "Sapphire", image: "https://images.unsplash.com/photo-1697302575756-1605c79a129b?w=1200&auto=format&fit=crop", description: "The pinnacle of premium-grade structural plywood. Crafted from superior hardwood with 0.9mm double-layer face veneer using an additional glue line on both sides. 100% composed veneer, 6X Press technology. E0 emission norms (lowest formaldehyde). Inherent fire-retardant (IS 5509:2021). ISI Certified. Density: 775 kg/CBM. Screw holding: 275 kg. Phenolic adhesive. Available in 4mm–25mm. Lifetime Warranty." },
-          { name: "Marine Blue", image: "https://images.unsplash.com/photo-1580407573078-75c6d2d174eb?w=1200&auto=format&fit=crop", description: "The next level of solid plywood. Crafted with tropical wood blend, 0.3mm face veneer on each side. E0 emission norms. Fire retardant (IS 5509:2021). 100% composed veneer, Quad Core Press (4X pressed). Density: 700 kg/CBM. Screw holding: 250 kg. Phenolic adhesive. Ideal for entertainment rooms, kitchens, and outdoor applications. Available in 4mm–25mm. 30-Year Warranty." },
-          { name: "Marine", image: "https://images.unsplash.com/photo-1686023858216-4f54c853acf2?w=1200&auto=format&fit=crop", description: "Premium BWP plywood for moisture-prone environments. Tropical wood with 0.30mm face veneer, Quad-Core Press Tech compression prevents deformation under high pressure. E1 emission norms. Fire retardant (IS 5509:2021). Density: 660 kg/CBM. Screw holding: 220 kg. Phenolic adhesive. Ideal for kitchens, bedrooms, and bathrooms. Available in 4mm–25mm. 25-Year Warranty." },
-          { name: "BWP+", image: "https://images.unsplash.com/photo-1756364898034-61949e14ba00?w=1200&auto=format&fit=crop", description: "Premium boiling water proof plywood engineered for high moisture and demanding conditions. High-quality tropical wood, 0.30mm face veneer. E1 emission norms. Quad Core Press (4X pressed). 100% composed veneer. Density: 640 kg/CBM. Screw holding: 200 kg. Phenolic adhesive. Advanced anti-termite and anti-borer protection. 100% calibrated. Available in 4mm–25mm. 20-Year Warranty." },
-          { name: "MR+", image: "https://images.unsplash.com/photo-1631889993877-71e193bf79b8?w=1200&auto=format&fit=crop", description: "The ultimate moisture-resistant plywood. Premium tropical wood, 0.30mm face veneer. E1 emission norms with eco-friendly amino adhesive. Quad Core Press (4X pressed). 100% composed veneer. Density: 600 kg/CBM. Screw holding: 200 kg. High humidity and moisture resistance. Ideal for bedrooms, living rooms, and offices. Available in 4mm–25mm. 15-Year Warranty." },
-          { name: "Fire Guardian", image: "https://images.unsplash.com/photo-1439668462223-e88f0ad95063?w=1200&auto=format&fit=crop", description: "The ultimate fire-retardant plywood for domestic and commercial settings. Engineered with exceptional fire-retardant characteristics (IS 5509:2021). 0.3mm face veneer, E1 emission norms. Quad Core Press (4X pressed). 100% composed veneer. Density: 700 kg/CBM. Screw holding: 250 kg. Phenolic adhesive. Ideal for offices, dining areas, and commercial spaces. Available in 4mm–25mm. 30-Year Warranty." }
+          { name: "Sapphire", image: "/images/playwood/century/gallery-1.jpg.jpg", description: "The pinnacle of premium-grade structural plywood. Crafted from superior hardwood with 0.9mm double-layer face veneer using an additional glue line on both sides. 100% composed veneer, 6X Press technology. E0 emission norms (lowest formaldehyde). Inherent fire-retardant (IS 5509:2021). ISI Certified. Density: 775 kg/CBM. Screw holding: 275 kg. Phenolic adhesive. Available in 4mm–25mm. Lifetime Warranty." },
+          { name: "Marine Blue", image: "/images/playwood/century/gallery-2.jpg.jpg", description: "The next level of solid plywood. Crafted with tropical wood blend, 0.3mm face veneer on each side. E0 emission norms. Fire retardant (IS 5509:2021). 100% composed veneer, Quad Core Press (4X pressed). Density: 700 kg/CBM. Screw holding: 250 kg. Phenolic adhesive. Ideal for entertainment rooms, kitchens, and outdoor applications. Available in 4mm–25mm. 30-Year Warranty." },
+          { name: "Marine", image: "/images/playwood/century/gallery-3.jpg.jpg", description: "Premium BWP plywood for moisture-prone environments. Tropical wood with 0.30mm face veneer, Quad-Core Press Tech compression prevents deformation under high pressure. E1 emission norms. Fire retardant (IS 5509:2021). Density: 660 kg/CBM. Screw holding: 220 kg. Phenolic adhesive. Ideal for kitchens, bedrooms, and bathrooms. Available in 4mm–25mm. 25-Year Warranty." },
+          { name: "BWP+", image: "/images/playwood/century/gallery-1.jpg.jpg", description: "Premium boiling water proof plywood engineered for high moisture and demanding conditions. High-quality tropical wood, 0.30mm face veneer. E1 emission norms. Quad Core Press (4X pressed). 100% composed veneer. Density: 640 kg/CBM. Screw holding: 200 kg. Phenolic adhesive. Advanced anti-termite and anti-borer protection. 100% calibrated. Available in 4mm–25mm. 20-Year Warranty." },
+          { name: "MR+", image: "/images/playwood/century/gallery-2.jpg.jpg", description: "The ultimate moisture-resistant plywood. Premium tropical wood, 0.30mm face veneer. E1 emission norms with eco-friendly amino adhesive. Quad Core Press (4X pressed). 100% composed veneer. Density: 600 kg/CBM. Screw holding: 200 kg. High humidity and moisture resistance. Ideal for bedrooms, living rooms, and offices. Available in 4mm–25mm. 15-Year Warranty." },
+          { name: "Fire Guardian", image: "/images/playwood/century/gallery-3.jpg.jpg", description: "The ultimate fire-retardant plywood for domestic and commercial settings. Engineered with exceptional fire-retardant characteristics (IS 5509:2021). 0.3mm face veneer, E1 emission norms. Quad Core Press (4X pressed). 100% composed veneer. Density: 700 kg/CBM. Screw holding: 250 kg. Phenolic adhesive. Ideal for offices, dining areas, and commercial spaces. Available in 4mm–25mm. 30-Year Warranty." }
         ],
         videos: ["qM-a-jivEEU"]
       },
@@ -119,20 +122,20 @@ export const siteData: Record<string, Category> = {
         title: "Archidply Decor Plywood Authorized Dealer | Platinum Prime, Marine, Fire Retardant",
         logo: "https://www.archidply.com/wp-content/uploads/2023/01/archidply-logo.png",
         gallery: [
-          "https://images.unsplash.com/photo-1588607866562-cad0d77b254a?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1617873229215-11589e502703?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1604916932991-eeb07b40bdcf?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1584950967742-2d5ddfa3c840?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1588939349575-7ab15c8bd1ef?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1612733459416-890db27bf3a7?w=1200&auto=format&fit=crop"
+          "/images/playwood/century/gallery-1.jpg.jpg",
+          "/images/playwood/century/gallery-2.jpg.jpg",
+          "/images/playwood/century/gallery-3.jpg.jpg",
+          "/images/playwood/century/gallery-1.jpg.jpg",
+          "/images/playwood/century/gallery-2.jpg.jpg",
+          "/images/playwood/century/gallery-3.jpg.jpg"
         ],
         products: [
-          { name: "Platinum Prime", image: "https://images.unsplash.com/photo-1504274066651-8d31a536b11a?w=1200&auto=format&fit=crop", description: "Archidply's flagship premium plywood. BWR grade, boiling water proof with auto-composed core and extreme density. Fungus and termite resistant. Conforms to IS:710 with E-0 formaldehyde emission rating. Recommended by architects, interior designers, and boat manufacturers. Available in 4–19mm thickness, sizes up to 8x4 ft. Lifetime Warranty." },
-          { name: "Marine Plywood (Gold)", image: "https://images.unsplash.com/photo-1758055660736-021f5ec9e247?w=1200&auto=format&fit=crop", description: "BWP Grade marine plywood with Toxin Check Technology — India's first eco-friendly plywood. 100% hardwood timber bonded with Phenol Formaldehyde resin. German Glue Line Technology makes it 100% borer-proof. Chemically impregnated, survives 72 hours of boiling. E-Zero formaldehyde emission. Extreme density, calibrated. Available in 4–19mm, sizes up to 8x4 ft. 30-Year Warranty." },
-          { name: "Fire Retardant Plywood", image: "https://images.unsplash.com/photo-1611600700192-d87eaeed4f81?w=1200&auto=format&fit=crop", description: "Chemical treated for fire resistance, meets IS 5509-2000 standards. Flame penetration >=15 min per 6mm thickness. Rate of burning >=20 min to lose 30% weight. Flammability >=30 min to second ignition. Bend resistant with intense screw holding. Eliminates toxic smoke and delays temperature rise. Available in 4–19mm, sizes up to 8x3 ft. 30-Year Warranty." },
-          { name: "MR Grade Plywood Gold", image: "https://images.unsplash.com/photo-1665507279638-5b48073c637b?w=1200&auto=format&fit=crop", description: "High-quality hardwood with Melamine Formaldehyde Resin bonding. Extra strong, termite and borer resistant. Moisture resistant grade conforming to IS:303. German Glue technology, Toxin-free. Ideal for bank furniture, hospital furniture, and commercial complexes. Available in 6–18mm, sizes up to 8x4 ft. 7-Year Warranty." },
-          { name: "BWR Plywood Gold", image: "https://images.unsplash.com/photo-1643902917449-98c7ef8c9685?w=1200&auto=format&fit=crop", description: "Boiling Water Resistant plywood bonded with Phenol Formaldehyde Resin (superior to urea formaldehyde). 100% hardwood timber with German Glue Line Technology. Conforms to IS:303. Toxin-free, eco-friendly. Ideal for furniture, partitions, racks, shelves, kitchen cabinets, and bathrooms. Available in 19–25mm, sizes up to 8x4 ft. 7-Year Warranty." },
-          { name: "Shuttering Plywood", image: "https://images.unsplash.com/photo-1631396326646-c06a935ff3a6?w=1200&auto=format&fit=crop", description: "BWP (Boiling Water Proof) grade with preservative treatment. Manufactured with select hardwood, ~9 layers of veneers pressed at very high temperatures. Withstands load, force, and vibrations during concrete pouring. Moisture and extreme weather resistant. Conforms to Indian Navy W/I standards and IS 4990. Available in 4–19mm, sizes up to 8x3 ft." }
+          { name: "Platinum Prime", image: "/images/playwood/century/gallery-1.jpg.jpg", description: "Archidply's flagship premium plywood. BWR grade, boiling water proof with auto-composed core and extreme density. Fungus and termite resistant. Conforms to IS:710 with E-0 formaldehyde emission rating. Recommended by architects, interior designers, and boat manufacturers. Available in 4–19mm thickness, sizes up to 8x4 ft. Lifetime Warranty." },
+          { name: "Marine Plywood (Gold)", image: "/images/playwood/century/gallery-2.jpg.jpg", description: "BWP Grade marine plywood with Toxin Check Technology — India's first eco-friendly plywood. 100% hardwood timber bonded with Phenol Formaldehyde resin. German Glue Line Technology makes it 100% borer-proof. Chemically impregnated, survives 72 hours of boiling. E-Zero formaldehyde emission. Extreme density, calibrated. Available in 4–19mm, sizes up to 8x4 ft. 30-Year Warranty." },
+          { name: "Fire Retardant Plywood", image: "/images/playwood/century/gallery-3.jpg.jpg", description: "Chemical treated for fire resistance, meets IS 5509-2000 standards. Flame penetration >=15 min per 6mm thickness. Rate of burning >=20 min to lose 30% weight. Flammability >=30 min to second ignition. Bend resistant with intense screw holding. Eliminates toxic smoke and delays temperature rise. Available in 4–19mm, sizes up to 8x3 ft. 30-Year Warranty." },
+          { name: "MR Grade Plywood Gold", image: "/images/playwood/century/gallery-1.jpg.jpg", description: "High-quality hardwood with Melamine Formaldehyde Resin bonding. Extra strong, termite and borer resistant. Moisture resistant grade conforming to IS:303. German Glue technology, Toxin-free. Ideal for bank furniture, hospital furniture, and commercial complexes. Available in 6–18mm, sizes up to 8x4 ft. 7-Year Warranty." },
+          { name: "BWR Plywood Gold", image: "/images/playwood/century/gallery-2.jpg.jpg", description: "Boiling Water Resistant plywood bonded with Phenol Formaldehyde Resin (superior to urea formaldehyde). 100% hardwood timber with German Glue Line Technology. Conforms to IS:303. Toxin-free, eco-friendly. Ideal for furniture, partitions, racks, shelves, kitchen cabinets, and bathrooms. Available in 19–25mm, sizes up to 8x4 ft. 7-Year Warranty." },
+          { name: "Shuttering Plywood", image: "/images/playwood/century/gallery-3.jpg.jpg", description: "BWP (Boiling Water Proof) grade with preservative treatment. Manufactured with select hardwood, ~9 layers of veneers pressed at very high temperatures. Withstands load, force, and vibrations during concrete pouring. Moisture and extreme weather resistant. Conforms to Indian Navy W/I standards and IS 4990. Available in 4–19mm, sizes up to 8x3 ft." }
         ],
         videos: ["avGQRB-C3rQ"]
       },
@@ -141,19 +144,20 @@ export const siteData: Record<string, Category> = {
         slug: "veneer",
         tagline: "Natural Wood Surfaces for Premium Interiors",
         description: "Wood veneers add the beauty of natural timber to furniture, wall paneling, and interior surfaces. We supply decorative veneers in a variety of species and finishes — teak, oak, walnut, maple, and more — for architects, interior designers, and furniture manufacturers. Veneers are used for doors, cabinets, tabletops, and accent walls to achieve a high-end look at a fraction of solid wood cost.",
-        heroImage: "https://images.unsplash.com/photo-1504274066651-8d31a536b11a?w=1600&auto=format&fit=crop",
+        heroImage: "/images/playwood/century/gallery-1.jpg.jpg",
         title: "Wood Veneer | Decorative Veneer Dealer",
         logo: "",
         gallery: [
-          "https://images.unsplash.com/photo-1614631446501-abcf76949eca?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1697302575756-1605c79a129b?w=1200&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1588607866562-cad0d77b254a?w=1200&auto=format&fit=crop"
+          "/images/playwood/century/gallery-1.jpg.jpg",
+          "/images/playwood/century/gallery-2.jpg.jpg",
+          "/images/playwood/century/gallery-3.jpg.jpg",
+          "/images/playwood/century/gallery- 1.jpg.jpg",
+          "/images/playwood/century/gallery-2.jpg.jpg"
         ],
         products: [
-          { name: "Teak Veneer", image: "https://images.unsplash.com/photo-1697302575756-1605c79a129b?w=1200&auto=format&fit=crop", description: "Premium teak wood veneer sheets for furniture and paneling. Natural durability and rich grain. Available in natural and stained finishes." },
-          { name: "Oak Veneer", image: "https://images.unsplash.com/photo-1504274066651-8d31a536b11a?w=1200&auto=format&fit=crop", description: "European and American oak veneers for cabinets, doors, and interior surfaces. Consistent grain and quality for professional applications." },
-          { name: "Walnut & Maple Veneer", image: "https://images.unsplash.com/photo-1614631446501-abcf76949eca?w=1200&auto=format&fit=crop", description: "Decorative veneers in walnut, maple, and other species. Ideal for tabletops, accent walls, and designer furniture." }
+          { name: "Teak Veneer", image: "/images/playwood/century/gallery-1.jpg.jpg", description: "Premium teak wood veneer sheets for furniture and paneling. Natural durability and rich grain. Available in natural and stained finishes." },
+          { name: "Oak Veneer", image: "/images/playwood/century/gallery-2.jpg.jpg", description: "European and American oak veneers for cabinets, doors, and interior surfaces. Consistent grain and quality for professional applications." },
+          { name: "Walnut & Maple Veneer", image: "/images/playwood/century/gallery-3.jpg.jpg", description: "Decorative veneers in walnut, maple, and other species. Ideal for tabletops, accent walls, and designer furniture." }
         ],
         videos: []
       }
@@ -246,7 +250,7 @@ export const siteData: Record<string, Category> = {
         products: [
           { name: "Mikasa Decorative HPL", image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&auto=format&fit=crop", description: "Bold decorative laminates with 400+ designs and 20 unique textures. From wood grains to abstract patterns — available in 1mm and 0.8mm thickness. Ideal for contemporary homes, modular kitchens, and modern offices." },
           { name: "Mikasa FX Exterior Panels", image: "https://images.unsplash.com/photo-1580407573078-75c6d2d174eb?w=1200&auto=format&fit=crop", description: "Weather-resistant exterior cladding panels designed for building facades, balconies, and outdoor applications. UV and rain-proof with long-lasting finish. Self-supporting compact panels requiring no substrate." },
-          { name: "Mikasa Textured Series", image: "https://images.unsplash.com/photo-1697302575756-1605c79a129b?w=1200&auto=format&fit=crop", description: "Specialty textured laminates including leather, fabric, stone, and metallic finishes for accent walls, wardrobes, and designer furniture. VRB (Variable Resistance Bonding) technology for unique tactile experience." }
+          { name: "Mikasa Textured Series", image: "/images/playwood/century/gallery-1.jpg.jpg", description: "Specialty textured laminates including leather, fabric, stone, and metallic finishes for accent walls, wardrobes, and designer furniture. VRB (Variable Resistance Bonding) technology for unique tactile experience." }
         ],
         videos: []
       },
@@ -289,7 +293,7 @@ export const siteData: Record<string, Category> = {
         ],
         products: [
           { name: "Post-Forming Laminates", image: "https://images.unsplash.com/photo-1611600700192-d87eaeed4f81?w=1200&auto=format&fit=crop", description: "Flexible laminates for curved surfaces with tight bending radius. Perfect for countertop edges, reception desks, and modern furniture design. Available in woodgrain, marble, solid, and abstract patterns. Exported to 80+ countries." },
-          { name: "Cuboid Compact Panel", image: "https://images.unsplash.com/photo-1697302575756-1605c79a129b?w=1200&auto=format&fit=crop", description: "Solid-core HPL panels for washroom cubicles, lockers, tabletops, and exterior cladding. Self-supporting with no substrate required. Water-resistant, fire-retardant, and available in a wide range of decors." },
+          { name: "Cuboid Compact Panel", image: "/images/playwood/century/gallery-1.jpg.jpg", description: "Solid-core HPL panels for washroom cubicles, lockers, tabletops, and exterior cladding. Self-supporting with no substrate required. Water-resistant, fire-retardant, and available in a wide range of decors." },
           { name: "Fascia Exterior Cladding", image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&auto=format&fit=crop", description: "UV-stable and weather-resistant facade cladding panels. Designed to withstand harsh conditions while maintaining appearance for decades. Available in wood, stone, metallic, and solid finishes." }
         ],
         videos: []
@@ -353,7 +357,7 @@ export const siteData: Record<string, Category> = {
         products: [
           { name: "Decorative HPL", image: "https://images.unsplash.com/photo-1504274066651-8d31a536b11a?w=1200&auto=format&fit=crop", description: "High-grade decorative laminates in wood, stone, solid, floral, geometric, and abstract patterns. Available in 0.8mm, 1mm, and 1.25mm thicknesses. ISO certified manufacturing with FSC certified raw materials." },
           { name: "PVC Laminates", image: "https://images.unsplash.com/photo-1612031736732-082438882d51?w=1200&auto=format&fit=crop", description: "Enhanced PVC surface sheets specifically designed for modular kitchens, wardrobes, and office cabinets. Water-resistant, easy to maintain, and available in high-gloss and matte finishes." },
-          { name: "Exterior Grade HPL", image: "https://images.unsplash.com/photo-1697302575756-1605c79a129b?w=1200&auto=format&fit=crop", description: "Weather-resistant laminates for outdoor applications — building facades, signage, and exterior furniture. UV-stable, fire-retardant, and CE certified for international quality standards." }
+          { name: "Exterior Grade HPL", image: "/images/playwood/century/gallery-1.jpg.jpg", description: "Weather-resistant laminates for outdoor applications — building facades, signage, and exterior furniture. UV-stable, fire-retardant, and CE certified for international quality standards." }
         ],
         videos: []
       }
@@ -450,7 +454,7 @@ export const siteData: Record<string, Category> = {
   },
   "particle-boards": {
     title: "Particle Boards",
-    description: "About Particle Boards — Economical and lightweight pre-laminated and plain particle boards for modern modular furniture. We supply quality particle boards from trusted brands including Merino, Century, and Greenlam for wardrobes, kitchen cabinets, and office furniture across North India.",
+    description: "About Particle Boards — Economical and lightweight pre-laminated and plain particle boards for modern modular furniture. We supply quality particle boards from trusted brands including Merino, Century, and Greenlam for wardrobes, kitchen cabinets, and office furniture across South India.",
     heroImage: "https://images.unsplash.com/photo-1756364898034-61949e14ba00?w=1200&auto=format&fit=crop",
     brands: {
       merino: {
@@ -715,3 +719,5 @@ export const siteData: Record<string, Category> = {
     }
   }
 };
+
+
